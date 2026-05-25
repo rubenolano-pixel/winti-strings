@@ -1,13 +1,1355 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>winti-strings</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0f7c3a" />
+<meta name="description" content="Winti Strings – Professionelle Tennis-Schläger-Besaitung in Winterthur. CHF 30 mit eigenen Saiten, CHF 50 inkl. Premiumsaiten." />
+<meta name="author" content="Rubén Olano">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://winti-strings.ch/">
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="Winti Strings – Schläger besaiten in Winterthur">
+<meta property="og:description" content="Professionelle Schläger-Besaitung in Winterthur. CHF 30 / CHF 50.">
+<meta property="og:url" content="https://winti-strings.ch/">
+<meta property="og:image" content="https://i.ibb.co/T6Dx2VT/IMG-1543.jpg">
+<title>Winti Strings – Tennis-Schläger besaiten in Winterthur · ab CHF 30</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===== THEME TOKENS ===== */
+:root {
+  --c-bg: #f6f6f1; --c-surface: #ffffff; --c-surface-2: #ecede5;
+  --c-ink: #0a0d0c; --c-border: #e0e1d8;
+  --c-text: #1a2421; --c-text-muted: #5b6c63;
+  --c-nav-bg: rgba(246,246,241,.88);
+}
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background: #0f1a11 !important;
+  color: #f0f4f0 !important;
+  border-color: #2a4a2e !important;
+}
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: #4a6a4a !important;
+}
+[data-theme="dark"] .price-pill {
+  background: #0f1a11;
+  border-color: #2a4a2e;
+}
+[data-theme="dark"] .quiz-option {
+  background: #0f1a11;
+  border-color: #2a4a2e;
+  color: #d4e4d4;
+}
+[data-theme="dark"] .quiz-option:hover {
+  background: #162018;
+  border-color: #f0f4f0;
+}
+[data-theme="dark"] .quiz-card,
+[data-theme="dark"] .wizard,
+[data-theme="dark"] .review-form-card {
+  background: #0f1a11;
+  border-color: #2a4a2e;
+}
+[data-theme="dark"] .service-card:not(.featured) {
+  background: #0f1a11;
+  border-color: #2a4a2e;
+}
+[data-theme="dark"] .price-tag {
+  background: #162018;
+  color: #f0f4f0;
+}
+[data-theme="dark"] .stat {
+  background: #0f1a11;
+  border-color: #2a4a2e;
+}
+[data-theme="dark"] .testimonial {
+  background: #0f1a11;
+  border-color: #2a4a2e;
+}
+[data-theme="dark"] .faq-item {
+  border-color: #2a4a2e;
+}
+[data-theme="dark"] .faq-item[open] summary {
+  background: #162018;
+}
+[data-theme="dark"] .aggregate-bar {
+  background: #0f1a11;
+  border-color: #2a4a2e;
+}
+[data-theme="dark"] .shop-item:hover {
+  background: #0f1a11;
+}
+[data-theme="dark"] .string-card:hover .string-row {
+  background: #0f1a11;
+}
+[data-theme="dark"] .about-list li {
+  border-color: #2a4a2e;
+}
+[data-theme="dark"] .contact-form-wrap h3,
+[data-theme="dark"] .contact-form-wrap p {
+  color: #d4e4d4;
+}
+[data-theme="dark"] .btn-outline {
+  border-color: #f0f4f0;
+  color: #f0f4f0;
+}
+[data-theme="dark"] .btn-outline:hover {
+  background: #f0f4f0;
+  color: #080e0a;
+}
+[data-theme="dark"] .theme-toggle {
+  background: #162018;
+  border-color: #2a4a2e;
+  color: #f0f4f0;
+}
+[data-theme="dark"] .calc-inputs {
+  background: #0f1a11;
+}
+[data-theme="dark"] .service-card.featured {
+  background: #0a5a29;
+  border-color: var(--c-accent);
+}
+[data-theme="dark"] .service-card.featured h3,
+[data-theme="dark"] .service-card.featured p {
+  color: #fff;
+}
+[data-theme="dark"] .service-card.featured .service-num {
+  color: rgba(255,255,255,.5);
+}
+:root {
+  --c-primary: #0f7c3a; --c-primary-dark: #0a5a29;
+  --c-accent: #d8ff3a; --c-accent-dark: #b5d92a;
+  --c-warn: #e0a800; --c-whatsapp: #25d366; --c-whatsapp-dark: #128c7e;
+  --r-sm: 6px; --r-md: 12px; --r-lg: 20px; --r-xl: 32px; --r-pill: 999px;
+  --shadow-sm: 0 1px 3px rgba(10,13,12,.06);
+  --shadow-md: 0 8px 24px rgba(10,13,12,.10);
+  --shadow-lg: 0 24px 60px rgba(10,13,12,.18);
+  --shadow-accent: 0 10px 30px rgba(216,255,58,.35);
+  --font-display: "Space Grotesk", -apple-system, sans-serif;
+  --font-sans: "Inter", -apple-system, sans-serif;
+  --ease-out: cubic-bezier(.2,.7,.2,1);
+  --ease-spring: cubic-bezier(.34,1.56,.64,1);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body { margin: 0; font-family: var(--font-sans); background: var(--c-bg); color: var(--c-text); -webkit-font-smoothing: antialiased; line-height: 1.6; transition: background .4s, color .4s; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--c-ink); text-decoration: none; }
+::selection { background: var(--c-accent); color: #0a0d0c; }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+/* ===== EYEBROW ===== */
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--c-ink); }
+.eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--c-ink); }
+
+/* ===== NAV ===== */
+nav.site-nav { position: sticky; top: 0; z-index: 60; background: var(--c-nav-bg); backdrop-filter: blur(14px) saturate(140%); border-bottom: 1px solid var(--c-border); transition: background .4s; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 24px; max-width: 1240px; margin: 0 auto; gap: 12px; }
+.nav-logo { font-family: var(--font-display); font-weight: 700; font-size: 20px; letter-spacing: -.02em; display: flex; align-items: center; gap: 10px; color: var(--c-ink); transition: transform .2s var(--ease-spring); }
+.nav-logo:hover { transform: scale(1.04); }
+.nav-logo .ball { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 50%; background: var(--c-accent); font-size: 16px; box-shadow: 0 2px 8px rgba(181,217,42,.5); animation: spinBall 8s linear infinite; }
+@keyframes spinBall { from{transform:rotate(0deg)}to{transform:rotate(360deg)} }
+.nav-links { display: flex; gap: 4px; align-items: center; flex-wrap: wrap; }
+.nav-links a { padding: 8px 14px; border-radius: var(--r-pill); color: var(--c-text); font-weight: 500; font-size: 14px; transition: background .2s, color .2s, transform .15s var(--ease-spring); }
+.nav-links a:hover { color: var(--c-ink); background: rgba(128,128,128,.1); transform: translateY(-1px); }
+.nav-cta { background: var(--c-ink) !important; color: var(--c-bg) !important; padding: 10px 18px !important; border-radius: var(--r-pill) !important; font-weight: 600 !important; display: inline-flex; align-items: center; gap: 6px; transition: transform .15s var(--ease-spring), background .2s !important; }
+.nav-cta:hover { transform: translateY(-2px) scale(1.03) !important; }
+.nav-right { display: flex; align-items: center; gap: 10px; }
+
+
+
+.menu-toggle { background: none; border: 1px solid var(--c-ink); cursor: pointer; width: 40px; height: 40px; border-radius: 50%; font-size: 18px; color: var(--c-ink); display: none; align-items: center; justify-content: center; transition: transform .15s var(--ease-spring); }
+.menu-toggle:hover { transform: scale(1.1); }
+@media (max-width: 880px) {
+  .menu-toggle { display: inline-flex; }
+  .nav-links { display: none; flex-direction: column; width: 100%; position: absolute; top: 100%; left: 0; background: var(--c-bg); border-bottom: 1px solid var(--c-border); padding: 16px; gap: 4px; }
+  .nav-links.open { display: flex; }
+  .nav-links a { width: 100%; padding: 14px 16px; }
+  .nav-cta { justify-content: center; }
+}
+
+/* ===== HERO ===== */
+header.hero { position: relative; padding: 80px 0 100px; overflow: hidden; background: var(--c-bg); }
+.hero-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 60px; align-items: center; }
+@media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+.live-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--c-ink); margin-bottom: 28px; }
+.live-badge .dot { width: 8px; height: 8px; background: var(--c-primary); border-radius: 50%; box-shadow: 0 0 0 4px rgba(15,124,58,.18); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{box-shadow:0 0 0 4px rgba(15,124,58,.18)}50%{box-shadow:0 0 0 8px rgba(15,124,58,.05)} }
+h1.hero-title { font-family: var(--font-display); font-size: clamp(48px,8vw,112px); font-weight: 600; margin: 0 0 24px; letter-spacing: -.04em; line-height: .92; color: var(--c-ink); }
+h1.hero-title .accent { font-style: italic; font-weight: 500; background: linear-gradient(180deg, transparent 60%, var(--c-accent) 60%); padding: 0 6px; margin-left: -6px; }
+.hero-sub { font-size: clamp(17px,1.6vw,20px); color: var(--c-text-muted); max-width: 540px; margin: 0 0 36px; line-height: 1.55; }
+.hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 44px; }
+
+/* ===== BUTTONS ===== */
+.btn { display: inline-flex; align-items: center; gap: 10px; justify-content: center; padding: 16px 26px; border-radius: var(--r-pill); border: 1px solid transparent; font-family: var(--font-sans); font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; transition: transform .2s var(--ease-spring), background .2s, color .2s, box-shadow .2s; white-space: nowrap; }
+.btn:hover { transform: translateY(-2px) scale(1.02); text-decoration: none; }
+.btn:active { transform: scale(.97); }
+.btn .arrow { transition: transform .2s var(--ease-spring); }
+.btn:hover .arrow { transform: translateX(5px); }
+.btn-whatsapp { background: var(--c-whatsapp); color: #fff; box-shadow: 0 4px 14px rgba(37,211,102,.35); }
+.btn-whatsapp:hover { background: var(--c-whatsapp-dark); box-shadow: 0 8px 22px rgba(37,211,102,.5); }
+.btn-primary { background: var(--c-ink); color: var(--c-bg); }
+.btn-primary:hover { background: var(--c-primary-dark); }
+.btn-accent { background: var(--c-accent); color: #0a0d0c; box-shadow: var(--shadow-accent); }
+.btn-accent:hover { background: var(--c-accent-dark); box-shadow: 0 12px 30px rgba(216,255,58,.5); }
+.btn-outline { background: transparent; color: var(--c-ink); border: 1px solid var(--c-ink); }
+.btn-outline:hover { background: var(--c-ink); color: var(--c-bg); }
+.btn-block { width: 100%; }
+
+.hero-prices { display: flex; gap: 16px; flex-wrap: wrap; }
+.price-pill { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--r-lg); padding: 20px 24px; min-width: 180px; transition: transform .25s var(--ease-spring), border-color .25s, box-shadow .25s; }
+.price-pill:hover { transform: translateY(-4px) scale(1.02); border-color: var(--c-ink); box-shadow: var(--shadow-md); }
+.price-pill .label { font-size: 11px; color: var(--c-text-muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
+.price-pill .price { font-family: var(--font-display); font-size: 36px; font-weight: 600; color: var(--c-ink); margin: 8px 0 4px; letter-spacing: -.02em; line-height: 1; }
+.price-pill .sub { font-size: 13px; color: var(--c-text-muted); }
+.hero-visual { position: relative; aspect-ratio: 1/1.05; border-radius: var(--r-xl); background: linear-gradient(140deg,#d8ff3a 0%,#b5d92a 35%,#0f7c3a 100%); overflow: hidden; box-shadow: var(--shadow-lg); }
+.hero-visual::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 25% 22%,rgba(255,255,255,.55),transparent 45%), radial-gradient(circle at 80% 80%,rgba(0,0,0,.18),transparent 50%); pointer-events: none; }
+.hero-visual .ball { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: clamp(160px,28vw,280px); filter: drop-shadow(0 16px 30px rgba(0,0,0,.25)); animation: bob 6s ease-in-out infinite; z-index: 2; }
+@keyframes bob { 0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(2deg)} }
+.hero-tag { position: absolute; bottom: 24px; left: 24px; background: rgba(10,13,12,.85); backdrop-filter: blur(8px); color: #fff; padding: 12px 18px; border-radius: var(--r-pill); font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; z-index: 3; }
+.hero-tag .pulse { width: 6px; height: 6px; background: var(--c-accent); border-radius: 50%; }
+
+/* ===== SOCIAL PROOF ===== */
+.social-proof-strip { background: var(--c-ink); padding: 28px 24px; text-align: center; }
+.sp-inner { max-width: 1240px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.sp-stars { color: var(--c-accent); font-size: 18px; letter-spacing: 4px; }
+.sp-quote { margin: 0; font-family: var(--font-display); font-size: clamp(17px,2vw,22px); font-weight: 600; color: #fff; letter-spacing: -.02em; }
+.sp-author { font-size: 13px; color: rgba(255,255,255,.55); }
+.sp-link { font-size: 13px; font-weight: 600; color: var(--c-accent); transition: opacity .2s; }
+.sp-link:hover { opacity: .75; }
+@media (max-width: 600px) { .sp-inner { flex-direction: column; gap: 10px; } }
+
+/* ===== STATS ===== */
+.stats-bar { display: grid; grid-template-columns: repeat(4,1fr); background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--r-lg); overflow: hidden; margin-top: 32px; }
+.stat { text-align: left; padding: 28px 30px; border-right: 1px solid var(--c-border); transition: background .2s; }
+.stat:hover { background: var(--c-surface-2); }
+.stat:last-child { border-right: none; }
+.stat .n { font-family: var(--font-display); font-size: clamp(28px,3vw,42px); font-weight: 600; color: var(--c-ink); letter-spacing: -.02em; line-height: 1; }
+.stat .l { font-size: 12px; color: var(--c-text-muted); margin-top: 10px; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+@media (max-width: 760px) {
+  .stats-bar { grid-template-columns: repeat(2,1fr); }
+  .stat { border-bottom: 1px solid var(--c-border); padding: 22px 20px; }
+  .stat:nth-child(2) { border-right: none; }
+  .stat:nth-child(3),.stat:nth-child(4) { border-bottom: none; }
+}
+
+/* ===== SECTIONS ===== */
+section.section { padding: 110px 0; position: relative; }
+section.alt { background: var(--c-surface-2); }
+@media (max-width: 760px) { section.section { padding: 80px 0; } }
+.section-head { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 60px; }
+@media (max-width: 800px) { .section-head { grid-template-columns: 1fr; gap: 16px; margin-bottom: 40px; } }
+.section-title { font-family: var(--font-display); font-size: clamp(36px,5.5vw,72px); font-weight: 600; margin: 14px 0 0; letter-spacing: -.035em; line-height: .98; color: var(--c-ink); }
+.section-title em { font-style: italic; font-weight: 500; color: var(--c-primary); }
+.section-lead { font-size: 17px; color: var(--c-text-muted); margin: 0; line-height: 1.5; max-width: 460px; }
+
+/* ===== SERVICES ===== */
+.services-grid { display: grid; grid-template-columns: repeat(12,1fr); gap: 20px; }
+.service-card { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--r-lg); padding: 32px; transition: transform .3s var(--ease-spring), border-color .3s, box-shadow .3s; position: relative; overflow: hidden; display: flex; flex-direction: column; min-height: 280px; }
+.service-card::before { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(216,255,58,.0), rgba(216,255,58,.06)); opacity: 0; transition: opacity .3s; }
+.service-card:hover { transform: translateY(-6px) scale(1.01); border-color: var(--c-ink); box-shadow: var(--shadow-md); }
+.service-card:hover::before { opacity: 1; }
+.service-card.featured { grid-column: span 6; background: var(--c-ink); color: #fff; border-color: var(--c-ink); min-height: 340px; }
+.service-card.featured:hover { border-color: var(--c-accent); box-shadow: 0 20px 50px rgba(216,255,58,.2); }
+.service-card:not(.featured) { grid-column: span 4; }
+.service-card:not(.featured):nth-of-type(4) { grid-column: span 8; }
+@media (max-width: 900px) { .service-card,.service-card.featured,.service-card:not(.featured),.service-card:not(.featured):nth-of-type(4) { grid-column: span 12; } }
+.service-num { font-family: var(--font-display); font-size: 14px; font-weight: 500; opacity: .5; margin-bottom: 18px; }
+.service-icon { font-size: 32px; margin-bottom: 18px; transition: transform .3s var(--ease-spring); }
+.service-card:hover .service-icon { transform: scale(1.2) rotate(-5deg); }
+.service-card h3 { font-family: var(--font-display); margin: 0 0 10px; font-size: 26px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; }
+.service-card.featured h3 { font-size: 34px; }
+.service-card p { color: var(--c-text-muted); margin: 0 0 22px; font-size: 15px; line-height: 1.55; flex: 1; }
+.service-card.featured p { color: rgba(255,255,255,.7); }
+.price-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--c-surface-2); color: var(--c-ink); padding: 8px 14px; border-radius: var(--r-pill); font-weight: 600; font-size: 13px; align-self: flex-start; transition: transform .2s var(--ease-spring); }
+.service-card:hover .price-tag { transform: scale(1.05); }
+.service-card.featured .price-tag { background: var(--c-accent); color: #0a0d0c; }
+.featured-badge { position: absolute; top: 20px; right: 20px; background: var(--c-accent); color: #0a0d0c; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 6px 12px; border-radius: var(--r-pill); animation: badgePulse 2s ease-in-out infinite; }
+@keyframes badgePulse { 0%,100%{box-shadow:0 0 0 0 rgba(216,255,58,.4)}50%{box-shadow:0 0 0 8px rgba(216,255,58,0)} }
+
+/* ===== QUIZ ===== */
+.quiz-card { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--r-xl); padding: 44px; max-width: 760px; margin: 0 auto; box-shadow: var(--shadow-md); }
+@media (max-width: 600px) { .quiz-card { padding: 28px 22px; } }
+.quiz-progress { display: flex; gap: 6px; margin-bottom: 32px; }
+.quiz-progress .step { flex: 1; height: 4px; background: var(--c-border); border-radius: 2px; transition: background .5s var(--ease-spring); }
+.quiz-progress .step.done { background: var(--c-ink); }
+.quiz-question { font-family: var(--font-display); font-size: 26px; font-weight: 600; margin-bottom: 24px; letter-spacing: -.02em; line-height: 1.2; color: var(--c-ink); animation: fadeUp .4s var(--ease-out); }
+@keyframes fadeUp { from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none} }
+.quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 600px) { 
+  .quiz-options { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+  .quiz-option { padding: 14px 10px; }
+  .quiz-option .emoji { font-size: 22px; }
+  .quiz-option .text strong { font-size: 13px; }
+  .quiz-option .text span { font-size: 11px; }
+}
+.quiz-option { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--r-md); padding: 20px; cursor: pointer; font-family: inherit; font-size: 15px; text-align: left; transition: border-color .2s, background .2s, transform .2s var(--ease-spring), box-shadow .2s; display: flex; align-items: center; gap: 14px; color: var(--c-text); }
+.quiz-option:hover { border-color: var(--c-ink); background: var(--c-surface-2); transform: translateY(-3px) scale(1.01); box-shadow: var(--shadow-md); }
+.quiz-option:active { transform: scale(.97); }
+.quiz-option .emoji { font-size: 28px; transition: transform .3s var(--ease-spring); }
+.quiz-option:hover .emoji { transform: scale(1.3) rotate(-8deg); }
+.quiz-option .text strong { display: block; font-weight: 600; color: var(--c-ink); font-size: 16px; margin-bottom: 2px; }
+.quiz-option .text span { font-size: 13px; color: var(--c-text-muted); }
+.quiz-result { background: var(--c-ink); color: #fff; border-radius: var(--r-lg); padding: 32px; margin-top: 24px; animation: fadeUp .5s var(--ease-spring); }
+.quiz-result h4 { margin: 0 0 12px; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--c-accent); font-weight: 600; }
+.quiz-result .name { font-family: var(--font-display); font-size: 32px; font-weight: 600; color: #fff; margin-bottom: 6px; letter-spacing: -.02em; }
+.quiz-result .sub { color: rgba(255,255,255,.65); font-size: 14px; margin-bottom: 18px; }
+.quiz-result .bar-row .lbl { color: rgba(255,255,255,.7); }
+.quiz-result .bar { background: rgba(255,255,255,.12); }
+.quiz-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px; align-items: center; }
+.quiz-restart { background: none; border: none; color: rgba(255,255,255,.7); font-weight: 500; cursor: pointer; padding: 8px 0; font-family: inherit; font-size: 14px; transition: color .2s; }
+.quiz-restart:hover { color: #fff; text-decoration: underline; }
+
+/* ===== STRINGS ===== */
+.strings-list { border-top: 1px solid var(--c-ink); }
+.string-card { cursor: pointer; display: block; border-bottom: 1px solid var(--c-border); transition: background .2s; }
+.string-row { display: grid; grid-template-columns: 60px 1.4fr 1.6fr 80px; gap: 28px; padding: 28px 0; align-items: center; transition: padding .25s var(--ease-out); }
+.string-card:hover .string-row { padding-inline: 16px; }
+@media (max-width: 800px) {
+  .string-row { grid-template-columns: 40px 1fr 40px; gap: 14px; padding: 22px 0; }
+  .string-row .specs-col { display: none; }
+}
+.string-card .num { font-family: var(--font-display); font-size: 14px; color: var(--c-text-muted); font-weight: 500; transition: color .2s; }
+.string-card:hover .num { color: var(--c-ink); }
+.string-card .name { font-family: var(--font-display); font-size: clamp(22px,2.6vw,32px); font-weight: 600; letter-spacing: -.02em; color: var(--c-ink); transition: letter-spacing .2s var(--ease-out); }
+.string-card:hover .name { letter-spacing: -.01em; }
+.string-card .brand { font-size: 11px; color: var(--c-text-muted); text-transform: uppercase; letter-spacing: .12em; font-weight: 600; margin-bottom: 6px; }
+.string-card .specs { font-size: 13px; color: var(--c-text-muted); margin-top: 4px; }
+.string-bars { display: grid; gap: 6px; }
+.bar-row { display: flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 500; }
+.bar-row .lbl { width: 80px; color: var(--c-text-muted); text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+.bar { flex: 1; height: 4px; background: var(--c-surface-2); border-radius: 2px; overflow: hidden; }
+.bar > span { display: block; height: 100%; background: var(--c-ink); border-radius: 2px; transform: scaleX(0); transform-origin: left; transition: transform .6s var(--ease-spring); }
+.string-card.open .bar > span, .string-card:hover .bar > span { transform: scaleX(1); }
+.arrow-col { font-family: var(--font-display); font-size: 24px; color: var(--c-text-muted); text-align: right; transition: transform .3s var(--ease-spring), color .2s; }
+.string-card:hover .arrow-col { color: var(--c-ink); transform: translateX(6px); }
+.string-card.open .arrow-col { color: var(--c-ink); transform: rotate(90deg); }
+.string-detail { display: none; background: var(--c-ink); color: #fff; border-radius: var(--r-md); padding: 20px 24px; margin: 4px 16px 12px; }
+.string-detail.visible { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; animation: fadeUp .35s var(--ease-spring); }
+@media (max-width: 800px) { .string-detail.visible { grid-template-columns: 1fr; gap: 10px; } }
+.sd-item .sd-label { font-size: 11px; color: var(--c-accent); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; margin-bottom: 4px; }
+.sd-item .sd-val { font-size: 14px; color: #fff; line-height: 1.5; }
+
+/* ===== LOGBUCH ===== */
+.logbuch-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+@media (max-width: 880px) { .logbuch-grid { grid-template-columns: 1fr; gap: 40px; } }
+.logbuch-features { list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; }
+.logbuch-features li { display: flex; align-items: flex-start; gap: 16px; }
+.logbuch-icon { font-size: 26px; flex-shrink: 0; margin-top: 2px; }
+.logbuch-features li strong { display: block; font-size: 15px; font-weight: 700; color: var(--c-ink); margin-bottom: 2px; }
+.logbuch-features li p { margin: 0; font-size: 13px; color: var(--c-text-muted); line-height: 1.5; }
+.logbuch-visual { display: flex; justify-content: center; }
+.logbuch-card {
+  background: #fff; border-radius: var(--r-xl); padding: 28px;
+  box-shadow: 0 20px 50px rgba(15,124,58,.15), 0 4px 12px rgba(10,13,12,.06);
+  border: 1px solid #c8e6c9; width: 100%; max-width: 340px;
+  transition: transform .3s var(--ease-spring), box-shadow .3s;
+}
+.logbuch-card:hover { transform: translateY(-4px); box-shadow: 0 28px 60px rgba(15,124,58,.2); }
+.lc-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid #e8f5e9; }
+.lc-entry { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f1f5f0; }
+.lc-entry:last-of-type { border-bottom: none; }
+.lc-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.lc-name { font-size: 14px; font-weight: 600; color: #1a2421; }
+.lc-meta { font-size: 12px; color: #5b6c63; margin-top: 1px; }
+.lc-badge { margin-left: auto; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; background: #e8f5e9; color: #0f7c3a; padding: 3px 8px; border-radius: 999px; white-space: nowrap; }
+.lc-rec { display: flex; align-items: center; gap: 12px; background: #f0faf4; border-radius: var(--r-md); padding: 14px; margin-top: 16px; border: 1px solid #c8e6c9; }
+.drink-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 700px) { .drink-grid { grid-template-columns: 1fr; } }
+.drink-card { border-radius: var(--r-lg); padding: 32px; }
+.drink-card.dark { background: var(--c-ink); color: #fff; }
+.drink-card.light { background: var(--c-surface); border: 1px solid var(--c-border); }
+.drink-eyebrow { font-size: 11px; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; margin-bottom: 12px; }
+.drink-card.dark .drink-eyebrow { color: var(--c-accent); }
+.drink-card.light .drink-eyebrow { color: var(--c-primary); }
+.drink-title { font-family: var(--font-display); font-size: 26px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 8px; }
+.drink-card.dark .drink-title { color: #fff; }
+.drink-card.light .drink-title { color: var(--c-ink); }
+.drink-desc { font-size: 13px; margin: 0 0 20px; line-height: 1.6; }
+.drink-card.dark .drink-desc { color: rgba(255,255,255,.65); }
+.drink-card.light .drink-desc { color: var(--c-text-muted); }
+.drink-ingredients { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.drink-ingredients li { font-size: 14px; padding: 10px 0; display: flex; align-items: center; gap: 10px; }
+.drink-card.dark .drink-ingredients li { border-bottom: 1px solid rgba(255,255,255,.1); color: #fff; }
+.drink-card.light .drink-ingredients li { border-bottom: 1px solid var(--c-border); color: var(--c-text); }
+.drink-ingredients li:last-child { border-bottom: none; }
+.drink-arrow { flex-shrink: 0; }
+.drink-card.dark .drink-arrow { color: var(--c-accent); }
+.drink-card.light .drink-arrow { color: var(--c-primary); }
+.drink-ing-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px; }
+.drink-card.dark .drink-ing-label { color: var(--c-accent); }
+.drink-card.light .drink-ing-label { color: var(--c-primary); }
+.ping-ripple { position: fixed; border-radius: 50%; background: rgba(216,255,58,.3); pointer-events: none; z-index: 9999; animation: pingOut .6s var(--ease-out) forwards; }
+@keyframes pingOut { from{transform:scale(0);opacity:1}to{transform:scale(3);opacity:0} }
+
+/* ===== CALC ===== */
+.calc-card { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--r-xl); padding: 0; overflow: hidden; display: grid; grid-template-columns: 1fr 1fr; box-shadow: var(--shadow-md); }
+@media (max-width: 880px) { .calc-card { grid-template-columns: 1fr; } }
+.calc-inputs { padding: 40px; }
+@media (max-width: 600px) { .calc-inputs { padding: 28px 22px; } }
+.calc-field { margin-bottom: 20px; }
+.calc-field:last-child { margin-bottom: 0; }
+.calc-field label { display: block; font-size: 11px; font-weight: 600; margin-bottom: 8px; color: var(--c-text-muted); text-transform: uppercase; letter-spacing: .1em; }
+.calc-field select,.calc-field input,.calc-field textarea { width: 100%; padding: 14px 16px; border: 1px solid var(--c-border); border-radius: var(--r-sm); font-family: inherit; font-size: 15px; background: var(--c-bg); color: var(--c-ink); transition: border-color .2s, box-shadow .2s, transform .15s var(--ease-spring); }
+.calc-field select:focus,.calc-field input:focus,.calc-field textarea:focus { outline: none; border-color: var(--c-ink); box-shadow: 0 0 0 3px rgba(216,255,58,.2); transform: scale(1.01); }
+.calc-result { background: var(--c-ink); color: #fff; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+.calc-result .lbl { font-size: 11px; color: var(--c-accent); text-transform: uppercase; letter-spacing: .12em; font-weight: 600; }
+.calc-result .val { font-family: var(--font-display); font-size: clamp(56px,8vw,96px); font-weight: 600; line-height: 1; margin: 10px 0 0; letter-spacing: -.04em; transition: transform .4s var(--ease-spring), opacity .3s; }
+.calc-result .val.pop { animation: valPop .5s var(--ease-spring); }
+@keyframes valPop { 0%{transform:scale(1.0)}30%{transform:scale(1.12)}100%{transform:scale(1.0)} }
+.calc-result .unit { font-family: var(--font-display); font-size: 28px; opacity: .55; margin-left: 8px; font-weight: 500; }
+.calc-result .range { font-size: 14px; color: rgba(255,255,255,.65); margin-top: 8px; }
+.calc-result .tip { font-size: 13px; background: rgba(255,255,255,.08); padding: 14px 16px; border-radius: var(--r-md); margin-top: 22px; line-height: 1.55; color: rgba(255,255,255,.85); border: 1px solid rgba(255,255,255,.1); }
+
+/* ===== WIZARD ===== */
+.wizard { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--r-xl); padding: 44px; box-shadow: var(--shadow-md); max-width: 760px; margin: 0 auto; }
+@media (max-width: 600px) { .wizard { padding: 28px 22px; } }
+.wizard-step { display: none; }
+.wizard-step.active { display: block; animation: fadeUp .4s var(--ease-spring); }
+.wizard-progress { display: flex; gap: 10px; margin-bottom: 32px; align-items: center; }
+.wizard-progress .dot { width: 36px; height: 36px; border-radius: 50%; background: var(--c-surface-2); display: flex; align-items: center; justify-content: center; font-weight: 600; color: var(--c-text-muted); font-size: 13px; transition: all .3s var(--ease-spring); font-family: var(--font-display); }
+.wizard-progress .dot.active { background: var(--c-ink); color: var(--c-bg); transform: scale(1.15); }
+.wizard-progress .dot.done { background: var(--c-primary); color: #fff; }
+.wizard-progress .line { flex: 1; height: 1px; background: var(--c-border); transition: background .3s; }
+.wizard-progress .line.done { background: var(--c-primary); }
+.wizard h3 { font-family: var(--font-display); margin: 0 0 8px; font-size: 30px; font-weight: 600; letter-spacing: -.02em; color: var(--c-ink); }
+.wizard .step-sub { color: var(--c-text-muted); margin-bottom: 24px; font-size: 15px; }
+.wizard-controls { display: flex; gap: 12px; margin-top: 28px; }
+.wizard-controls .btn { flex: 1; }
+.wizard-controls .btn-back { background: transparent; color: var(--c-ink); border: 1px solid var(--c-border); flex: 0 0 auto; padding: 16px 22px; }
+.wizard-controls .btn-back:hover { background: var(--c-surface-2); border-color: var(--c-ink); }
+.preview-box { background: var(--c-ink); color: #fff; border-radius: var(--r-md); padding: 22px; font-family: "SF Mono","Roboto Mono",ui-monospace,monospace; font-size: 13px; white-space: pre-line; line-height: 1.7; margin: 16px 0; }
+
+/* ===== ABOUT ===== */
+.about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 80px; align-items: center; }
+@media (max-width: 880px) { .about-grid { grid-template-columns: 1fr; gap: 40px; } }
+.about-photo-wrap { position: relative; border-radius: var(--r-xl); overflow: hidden; aspect-ratio: 1; background: linear-gradient(140deg,var(--c-accent),var(--c-primary)); box-shadow: var(--shadow-lg); transition: transform .4s var(--ease-spring); }
+.about-photo-wrap:hover { transform: scale(1.02) rotate(.5deg); }
+.about-photo { width: 100%; height: 100%; object-fit: cover; display: block; }
+.about-quote { position: absolute; bottom: 20px; left: 20px; right: 20px; background: rgba(10,13,12,.85); backdrop-filter: blur(10px); color: #fff; padding: 16px 20px; border-radius: var(--r-md); font-size: 14px; font-family: var(--font-display); font-weight: 500; }
+.about-quote::before { content: "„"; color: var(--c-accent); font-size: 24px; line-height: 0; margin-right: 6px; vertical-align: -6px; }
+.about-list { padding: 0; list-style: none; margin: 24px 0; display: grid; gap: 12px; }
+.about-list li { padding: 14px 0 14px 32px; font-size: 15px; border-top: 1px solid var(--c-border); position: relative; transition: padding-left .2s var(--ease-spring); }
+.about-list li:hover { padding-left: 40px; }
+.about-list li:last-child { border-bottom: 1px solid var(--c-border); }
+.about-list li::before { content: "→"; position: absolute; left: 0; top: 14px; color: var(--c-primary); font-weight: 700; font-family: var(--font-display); transition: transform .2s var(--ease-spring); }
+.about-list li:hover::before { transform: translateX(4px); }
+
+/* ===== SHOP ===== */
+.shop-list { border-top: 1px solid var(--c-ink); }
+.shop-item { display: grid; grid-template-columns: 48px 1fr auto; gap: 24px; padding: 26px 0; border-bottom: 1px solid var(--c-border); align-items: center; transition: background .2s, padding .2s var(--ease-out); }
+.shop-item:hover { background: var(--c-surface); padding-inline: 16px; }
+.shop-item .si-num { font-family: var(--font-display); font-size: 13px; color: var(--c-text-muted); font-weight: 500; }
+.shop-item .si-body { display: flex; flex-direction: column; gap: 4px; }
+.shop-item .si-name { font-family: var(--font-display); font-size: clamp(18px,2.2vw,26px); font-weight: 600; letter-spacing: -.02em; color: var(--c-ink); }
+.shop-item .si-desc { font-size: 13px; color: var(--c-text-muted); max-width: 560px; line-height: 1.5; }
+.shop-item .si-tag { display: inline-flex; align-self: flex-start; margin-top: 6px; background: var(--c-surface-2); color: var(--c-ink); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 10px; border-radius: var(--r-pill); }
+.shop-item .si-cta { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; font-size: 13px; font-weight: 600; color: var(--c-ink); border: 1px solid var(--c-ink); border-radius: var(--r-pill); padding: 10px 18px; text-decoration: none; transition: background .2s, color .2s, transform .2s var(--ease-spring); flex-shrink: 0; }
+.shop-item .si-cta:hover { background: var(--c-ink); color: var(--c-bg); transform: scale(1.05); }
+@media (max-width: 700px) { .shop-item { grid-template-columns: 36px 1fr; gap: 14px; } .shop-item .si-cta { grid-column: 2; justify-self: start; } }
+
+/* ===== TESTIMONIALS ===== */
+.aggregate-bar { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 28px; margin-bottom: 40px; background: var(--c-surface); padding: 24px 30px; border-radius: var(--r-lg); border: 1px solid var(--c-border); }
+@media (max-width: 700px) { .aggregate-bar { grid-template-columns: 1fr; gap: 16px; } }
+.aggregate-bar .big-rating { font-family: var(--font-display); font-size: clamp(40px,5vw,56px); font-weight: 600; color: var(--c-ink); line-height: 1; letter-spacing: -.03em; }
+.aggregate-bar .stars-big { color: var(--c-warn); font-size: 22px; letter-spacing: 4px; }
+.aggregate-bar .info { font-size: 13px; color: var(--c-text-muted); line-height: 1.6; }
+.aggregate-bar .info strong { color: var(--c-ink); display: block; font-size: 15px; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 20px; }
+.testimonial.t-hidden { display: none; }
+.testimonial-toggle-wrap { display: flex; justify-content: center; margin-top: 28px; }
+.testimonial-toggle { background: transparent; color: var(--c-ink); border: 1px solid var(--c-ink); padding: 14px 28px; border-radius: var(--r-pill); font-family: var(--font-sans); font-size: 14px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; transition: background .2s, color .2s, transform .2s var(--ease-spring); }
+.testimonial-toggle:hover { background: var(--c-ink); color: var(--c-bg); transform: scale(1.03); }
+.testimonial-toggle .chev { display: inline-block; transition: transform .25s var(--ease-spring); }
+.testimonial-toggle.expanded .chev { transform: rotate(180deg); }
+.testimonial { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--r-lg); padding: 28px; display: flex; flex-direction: column; gap: 16px; transition: transform .3s var(--ease-spring), border-color .3s, box-shadow .3s; }
+.testimonial:hover { transform: translateY(-4px) scale(1.01); border-color: var(--c-ink); box-shadow: var(--shadow-md); }
+.testimonial .stars { color: var(--c-warn); font-size: 14px; letter-spacing: 3px; }
+.testimonial blockquote { margin: 0; font-family: var(--font-display); font-size: 18px; line-height: 1.4; color: var(--c-ink); flex: 1; letter-spacing: -.01em; font-weight: 500; }
+.testimonial blockquote::before { content: "„"; font-family: var(--font-display); font-size: 56px; color: var(--c-accent); line-height: 0; margin-right: 4px; vertical-align: -16px; }
+.testimonial .author { display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--c-border); }
+.testimonial .avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--c-ink); color: var(--c-bg); display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 13px; font-family: var(--font-display); transition: transform .2s var(--ease-spring); }
+.testimonial:hover .avatar { transform: scale(1.1) rotate(-5deg); }
+.testimonial .meta .name { font-weight: 600; color: var(--c-ink); font-size: 13px; }
+.testimonial .meta .date { color: var(--c-text-muted); font-size: 12px; }
+.review-form-card { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--r-xl); padding: 36px; margin-top: 48px; max-width: 760px; margin-inline: auto; }
+.review-form-card h3 { font-family: var(--font-display); margin-top: 0; font-size: 24px; font-weight: 600; letter-spacing: -.02em; color: var(--c-ink); }
+
+/* ===== FAQ ===== */
+.faq-grid { max-width: 880px; margin: 0 auto; border-top: 1px solid var(--c-ink); }
+.faq-item { border-bottom: 1px solid var(--c-border); }
+.faq-item summary { padding: 22px 0; cursor: pointer; font-family: var(--font-display); font-weight: 600; font-size: 19px; color: var(--c-ink); display: flex; justify-content: space-between; align-items: center; list-style: none; letter-spacing: -.01em; transition: color .2s, padding-left .2s var(--ease-spring); }
+.faq-item summary:hover { color: var(--c-primary); padding-left: 8px; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; font-size: 28px; color: var(--c-ink); font-weight: 300; transition: transform .3s var(--ease-spring); margin-left: 16px; flex-shrink: 0; }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-body { padding: 0 0 24px; color: var(--c-text-muted); font-size: 15px; line-height: 1.7; max-width: 720px; animation: fadeUp .3s var(--ease-out); }
+
+/* ===== CONTACT ===== */
+.contact-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; }
+@media (max-width: 880px) { .contact-grid { grid-template-columns: 1fr; } }
+.contact-info-card { background: var(--c-ink); color: #fff; padding: 44px; border-radius: var(--r-xl); position: relative; overflow: hidden; }
+.contact-info-card::after { content: ""; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; background: var(--c-accent); border-radius: 50%; opacity: .18; filter: blur(20px); animation: glowPulse 4s ease-in-out infinite; }
+@keyframes glowPulse { 0%,100%{opacity:.18;transform:scale(1)}50%{opacity:.28;transform:scale(1.1)} }
+.contact-info-card h3 { font-family: var(--font-display); margin: 0 0 10px; font-size: 30px; font-weight: 600; letter-spacing: -.02em; position: relative; z-index: 2; color: #fff; }
+.contact-info-card > p { color: rgba(255,255,255,.7); margin-bottom: 28px; position: relative; z-index: 2; }
+.contact-info-item { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,.12); position: relative; z-index: 2; transition: padding-left .2s var(--ease-spring); }
+.contact-info-item:hover { padding-left: 8px; }
+.contact-info-item:last-of-type { border-bottom: none; }
+.contact-info-item .ico { font-size: 22px; width: 30px; text-align: center; }
+.contact-info-item .det .l { font-size: 11px; color: rgba(255,255,255,.55); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
+.contact-info-item .det .v { font-weight: 600; font-size: 16px; margin-top: 2px; }
+.contact-info-item .det .v a { color: #fff; }
+.contact-form-wrap h3 { font-family: var(--font-display); margin: 0 0 8px; font-size: 26px; font-weight: 600; letter-spacing: -.02em; color: var(--c-ink); }
+.contact-form-wrap > p { color: var(--c-text-muted); margin-bottom: 24px; }
+
+/* ===== STAR PICKER ===== */
+.star-rate { display: inline-flex; gap: 4px; }
+.star-btn { background: none; border: none; cursor: pointer; padding: 4px 2px; font-size: 36px; line-height: 1; color: #dcdcd5; transition: color .12s, transform .2s var(--ease-spring); font-family: inherit; }
+.star-btn:hover { transform: scale(1.25) rotate(-5deg); }
+.star-btn.active,.star-btn.hover { color: var(--c-warn); }
+
+/* ===== FOOTER ===== */
+footer.site-footer { background: var(--c-ink); color: rgba(255,255,255,.7); padding: 100px 24px 30px; position: relative; overflow: hidden; }
+.footer-mega { font-family: var(--font-display); font-size: clamp(80px,18vw,240px); font-weight: 600; letter-spacing: -.05em; color: #fff; line-height: .85; margin: 0 0 60px; display: block; }
+.footer-mega .accent { color: var(--c-accent); font-style: italic; font-weight: 500; }
+.footer-grid { max-width: 1240px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,.12); }
+@media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr; gap: 28px; } }
+.footer-grid h4 { color: #fff; font-size: 11px; text-transform: uppercase; letter-spacing: .12em; margin: 0 0 16px; font-weight: 600; }
+.footer-grid p,.footer-grid a,.footer-grid li { color: rgba(255,255,255,.6); font-size: 14px; line-height: 1.9; }
+.footer-grid a:hover { color: var(--c-accent); }
+.footer-grid ul { list-style: none; padding: 0; margin: 0; }
+.footer-brand { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: #fff; margin-bottom: 12px; letter-spacing: -.02em; display: flex; align-items: center; gap: 10px; }
+.footer-brand .dot { width: 26px; height: 26px; border-radius: 50%; background: var(--c-accent); display: inline-flex; align-items: center; justify-content: center; font-size: 14px; }
+.footer-copy { text-align: left; padding-top: 24px; font-size: 12px; color: rgba(255,255,255,.4); max-width: 1240px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+/* ===== FAB ===== */
+.fab-wa { position: fixed; bottom: 24px; right: 24px; z-index: 70; width: 60px; height: 60px; border-radius: 50%; background: var(--c-whatsapp); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 12px 30px rgba(37,211,102,.45); transition: transform .2s var(--ease-spring); text-decoration: none; }
+.fab-wa:hover { transform: scale(1.15) rotate(-8deg); }
+.fab-wa::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--c-whatsapp); animation: ripple 2.4s infinite; }
+@keyframes ripple { 0%{transform:scale(1);opacity:.8}100%{transform:scale(1.7);opacity:0} }
+
+/* ===== MISC ===== */
+:focus-visible { outline: 2px solid var(--c-ink); outline-offset: 3px; border-radius: 4px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+[data-reveal] { opacity: 0; transform: translateY(20px); transition: opacity .7s var(--ease-out), transform .7s var(--ease-out); }
+[data-reveal].in { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav" role="navigation" aria-label="Hauptnavigation">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo"><span class="ball">🎾</span> Winti Strings</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#calc">Spannung</a>
+      <a href="#strings">Sortiment</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">Über mich</a>
+      <a href="#faq">FAQ</a>
+      <a href="#logbuch">Logbuch</a>
+      <a href="#testimonials">Bewertungen</a>
+      <a href="https://wa.me/41764423447" class="nav-cta">Termin buchen <span class="arrow">→</span></a>
+    </div>
+    <div class="nav-right">
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="container">
+    <div class="hero-grid">
+      <div data-reveal>
+        <div class="live-badge"><span class="dot"></span> Winterthur · Heute geöffnet</div>
+        <h1 class="hero-title">Dein&nbsp;Schläger.<br><span class="accent">Frisch</span>&nbsp;besaitet.</h1>
+        <p class="hero-sub">Professionelle Tennis-Schläger-Besaitung in Winterthur. Schnell, präzise, mit Leidenschaft. Termin in 30 Sekunden per WhatsApp.</p>
+        <div class="hero-cta-row">
+          <a href="#booking" class="btn btn-accent">🎾 In 4 Klicks zum Termin <span class="arrow">→</span></a>
+          <a href="https://wa.me/41764423447?text=Hallo%20Rub%C3%A9n%2C%20ich%20m%C3%B6chte%20gerne%20einen%20Schl%C3%A4ger%20besaiten%20lassen." class="btn btn-outline">💬 WhatsApp</a>
+        </div>
+        <div class="hero-prices">
+          <div class="price-pill">
+            <div class="label">Mit eigenen Saiten</div>
+            <div class="price">CHF 35</div>
+            <div class="sub">Schnell · Sauber · Fair</div>
+          </div>
+          <div class="price-pill">
+            <div class="label">Mit Premium-Saiten</div>
+            <div class="price">CHF 55</div>
+            <div class="sub">Inkl. Beratung &amp; Saite</div>
+          </div>
+        </div>
+      </div>
+      <div data-reveal>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="ball">🎾</div>
+          <span class="hero-tag"><span class="pulse"></span> Made in Winterthur</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="social-proof-strip">
+  <div class="sp-inner">
+    <div class="sp-stars">★★★★★</div>
+    <blockquote class="sp-quote">„Der beste Bespannungsservice in Winterthur!"</blockquote>
+    <div class="sp-author">— Tomi, Mai 2026</div>
+    <a href="#testimonials" class="sp-link">10 Bewertungen ansehen →</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="stats-bar" role="region" aria-label="Statistiken" data-reveal>
+    <div class="stat"><div class="n" id="stat-rackets">120+</div><div class="l">Schläger besaitet</div></div>
+    <div class="stat"><div class="n">5.0 ★</div><div class="l">aus 10 Bewertungen</div></div>
+    <div class="stat"><div class="n">&lt; 24h</div><div class="l">Bearbeitungszeit</div></div>
+    <div class="stat"><div class="n">11</div><div class="l">Premium-Saiten</div></div>
+  </div>
+</div>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div><span class="eyebrow">Dienstleistungen</span><h2 class="section-title">Was ich <em>für dich</em> tue.</h2></div>
+      <p class="section-lead">Von der Express-Besaitung bis zum Hybrid-Experiment – genau nach deinen Wünschen.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card" data-reveal>
+        <div class="service-num">01 / 05</div>
+        <div class="service-icon">🎯</div>
+        <h3>Bespannungs-Service mit eigenen Saiten</h3>
+        <p>Du bringst deine eigenen Saiten mit – ich besaite professionell mit der gewünschten Spannung. Innert 24 Stunden zurück.</p>
+        <span class="price-tag">CHF 35 · mit eigenen Saiten</span>
+      </article>
+      <article class="service-card featured" data-reveal>
+        <span class="featured-badge">★ Beliebt</span>
+        <div class="service-num">02 / 05</div>
+        <h3>Komplett-Service</h3>
+        <p>Kein eigenes Material nötig – ich berate dich persönlich und besaite mit einer hochwertigen Saite aus meinem Sortiment.</p>
+        <span class="price-tag">CHF 55 · inkl. Saiten</span>
+      </article>
+      <article class="service-card" data-reveal>
+        <div class="service-num">03 / 05</div>
+        <div class="service-icon">🚀</div>
+        <h3>Express-Service</h3>
+        <p>Dringendes Match morgen? Express-Besaitung innert 4–8 h – fix kalkulierbar, kein Hin-und-Her.</p>
+        <span class="price-tag">+CHF 15 Aufpreis</span>
+      </article>
+      <article class="service-card" data-reveal>
+        <div class="service-num">04 / 05</div>
+        <div class="service-icon">🧪</div>
+        <h3>Hybrid-Besaitung</h3>
+        <p>Kombination verschiedener Saiten für optimale Performance – Längs- und Querbespannung individuell angepasst.</p>
+        <span class="price-tag">Auf Anfrage</span>
+      </article>
+      <article class="service-card" data-reveal>
+        <div class="service-num">05 / 05</div>
+        <div class="service-icon">👑</div>
+        <h3>Pro-Paket</h3>
+        <p>Das komplette Rundum-Sorglos-Paket: Premium-Saite deiner Wahl, Hybrid-Option, persönliche Spannungs-Optimierung – und 6-Monats-Garantie auf die Spannung.</p>
+        <span class="price-tag">CHF 75 · alles inklusive</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="quiz">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div><span class="eyebrow">Saiten-Quiz</span><h2 class="section-title">Finde deine <em>Saite</em>.</h2></div>
+      <p class="section-lead">4 Fragen, 1 Empfehlung. 60 Sekunden, kostenlos, ohne Anmeldung.</p>
+    </div>
+    <div class="quiz-card" data-reveal>
+      <div class="quiz-progress"><div class="step done"></div><div class="step"></div><div class="step"></div><div class="step"></div></div>
+      <div id="quiz-container"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="strings">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div><span class="eyebrow">Sortiment</span><h2 class="section-title">Elf Saiten.<br><em>Eine</em> für dich.</h2></div>
+      <p class="section-lead">Hochwertige Saiten von Premium-Marken – klicke für Details.</p>
+    </div>
+    <div class="strings-list" id="strings-grid"></div>
+    <p style="margin-top:32px;font-size:14px;color:var(--c-text-muted);text-align:center;">Alle Saiten werden persönlich empfohlen – nutze das Quiz oben oder schreib mir direkt.</p>
+  </div>
+</section>
+
+<section class="section alt" id="calc">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div><span class="eyebrow">Spannungs-Rechner</span><h2 class="section-title">Welche <em>kg-Spannung</em>?</h2></div>
+      <p class="section-lead">Faustregel basierend auf Spielstil, Schlägerkopf und Arm-Empfindlichkeit.</p>
+    </div>
+    <div class="calc-card" data-reveal>
+      <div class="calc-inputs">
+        <div class="calc-field"><label for="ts-style">Dein Spielstil</label>
+          <select id="ts-style">
+            <option value="0">⚖️ Allround / Vielseitig</option>
+            <option value="-1.5">💥 Power-Spieler</option>
+            <option value="1.5">🌀 Topspin-Spieler</option>
+            <option value="-2">🎯 Touch / Slice / Volley</option>
+            <option value="0">🧗 Defensiv / langer Rallye-Stil</option>
+          </select>
+        </div>
+        <div class="calc-field"><label for="ts-head">Schlägerkopf-Grösse</label>
+          <select id="ts-head">
+            <option value="2">Klein (&lt; 98 in²)</option>
+            <option value="0" selected>Mid+ (98–100 in²)</option>
+            <option value="-1.5">Oversize (&gt; 100 in²)</option>
+          </select>
+        </div>
+        <div class="calc-field"><label for="ts-arm">Arm-Empfindlichkeit</label>
+          <select id="ts-arm">
+            <option value="0">Robust – kein Problem</option>
+            <option value="-1.5" selected>Normal – etwas Komfort</option>
+            <option value="-3">Empfindlich (Tennisarm)</option>
+          </select>
+        </div>
+        <div class="calc-field"><label for="ts-string">Saitentyp</label>
+          <select id="ts-string">
+            <option value="0">Polyester (Standard)</option>
+            <option value="1.5">Multifilament</option>
+            <option value="2">Naturdarm</option>
+            <option value="-0.5">Hybrid (Poly + Multi)</option>
+          </select>
+        </div>
+      </div>
+      <div class="calc-result" aria-live="polite">
+        <div class="lbl">Empfehlung</div>
+        <div><span class="val" id="ts-value">23</span><span class="unit">kg</span></div>
+        <div class="range" id="ts-range">Bereich: 22–24 kg</div>
+        <div class="tip" id="ts-tip">💡 Bei Unsicherheit immer mit der Standard-Spannung starten.</div>
+      </div>
+  </div>
+</section>
+
+<section class="section alt" id="shop">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div><span class="eyebrow">Shop</span><h2 class="section-title">Meine <em>Picks</em><br>für dich.</h2></div>
+      <p class="section-lead">Ausgewählte Produkte die ich selbst kenne und empfehle – kein Massenzeug, nur was wirklich einen Unterschied macht auf und neben dem Court.</p>
+    </div>
+    <div class="shop-list" id="shop-list"></div>
+    <div style="margin-top:48px;border-top:1px solid var(--c-ink);padding-top:40px;">
+      <span class="eyebrow">Bonus-Tipp</span>
+      <h3 class="section-title" style="font-size:clamp(28px,4vw,48px);margin-top:12px;">Dein <em>Getränk</em><br>macht den Unterschied.</h3>
+      <p style="color:var(--c-text-muted);font-size:16px;max-width:560px;margin:16px 0 36px;">Misch dir dein eigenes – günstig, effektiv, genau auf das Spiel abgestimmt.</p>
+      <div class="drink-grid">
+        <div class="drink-card dark">
+          <div class="drink-eyebrow">Vor dem Spiel</div>
+          <div class="drink-title">Hypotonisches Getränk</div>
+          <p class="drink-desc">Trinke 1½ Std. vor dem Spiel. Alle 15 Min. ein Glas – 45 Min. vorher aufhören.</p>
+          <div class="drink-ing-label">Zutaten</div>
+          <ul class="drink-ingredients">
+            <li><span class="drink-arrow">→</span> 1 Liter Wasser</li>
+            <li><span class="drink-arrow">→</span> Saft von ½ grosser Zitrone</li>
+            <li><span class="drink-arrow">→</span> 1 EL brauner Zucker oder 200 ml Beeren-Saft</li>
+            <li><span class="drink-arrow">→</span> ½ TL naturbelassenes Meersalz</li>
+          </ul>
+        </div>
+        <div class="drink-card light">
+          <div class="drink-eyebrow">Während dem Spiel</div>
+          <div class="drink-title">Isotonisches Getränk</div>
+          <p class="drink-desc">Alle 15 Min. ein Glas während Training und Spiel.</p>
+          <div class="drink-ing-label">Zutaten</div>
+          <ul class="drink-ingredients">
+            <li><span class="drink-arrow">→</span> 1 Liter Wasser</li>
+            <li><span class="drink-arrow">→</span> Saft von 1 grosser Zitrone</li>
+            <li><span class="drink-arrow">→</span> 3 EL brauner Zucker oder 500 ml Beeren-Saft</li>
+            <li><span class="drink-arrow">→</span> 1 TL naturbelassenes Meersalz</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo-wrap" data-reveal>
+        <img class="about-photo" src="https://i.ibb.co/T6Dx2VT/IMG-1543.jpg" alt="Rubén – Winti Strings" loading="lazy">
+        <div class="about-quote">Dein Schläger spricht – ich übersetze.</div>
+      </div>
+      <div data-reveal>
+        <span class="eyebrow">Über mich</span>
+        <h2 class="section-title" style="margin-top:14px;">Hey, ich bin <em>Rubén</em>.</h2>
+        <p style="font-size:17px;color:var(--c-text-muted);line-height:1.6;margin:22px 0 0;">Dein Schlägerflüsterer in Winterthur. Leidenschaftlicher Tennisspieler und Bespanner mit echter Expertise.</p>
+        <ul class="about-list">
+          <li>Persönliche Beratung zur richtigen Bespannungsspannung</li>
+          <li>Schnelle Terminvergabe per WhatsApp</li>
+          <li>Zuverlässig &amp; fair – in Winterthur bekannt</li>
+          <li>Spezialisiert auf Tennisschläger (inkl. Hybrid)</li>
+        </ul>
+        <a href="https://wa.me/41764423447" class="btn btn-whatsapp" style="margin-top:16px;">💬 Schreib mir auf WhatsApp <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="logbuch" style="background: linear-gradient(135deg, #f0faf4 0%, #f6f6f1 100%); border-top: 1px solid #c8e6c9; border-bottom: 1px solid #c8e6c9;">
+  <div class="container">
+    <div class="logbuch-grid" data-reveal>
+      <div>
+        <span class="eyebrow" style="color: var(--c-primary);">Neu</span>
+        <h2 class="section-title" style="margin-top:14px;">Dein persönliches<br><em>Bespannungs-Logbuch</em></h2>
+        <p style="font-size:17px;color:var(--c-text-muted);line-height:1.6;margin:20px 0 32px;max-width:480px;">Verfolge deine gesamte Bespannungshistorie, erhalte personalisierte Empfehlungen und buche deinen nächsten Termin – alles an einem Ort. Exklusiv für Kunden von Winti Strings.</p>
+        <ul class="logbuch-features">
+          <li><span class="logbuch-icon">📋</span><div><strong>Vollständiges Bespannungs-Logbuch</strong><p>Alle deine Besaitungen auf einen Blick – Saite, Spannung, Datum.</p></div></li>
+          <li><span class="logbuch-icon">🎯</span><div><strong>Persönliche Empfehlungen</strong><p>Massgeschneiderte Saiten- und Spannungsempfehlungen basierend auf deiner Historie.</p></div></li>
+          <li><span class="logbuch-icon">📅</span><div><strong>Direkte Terminanfrage via WhatsApp</strong><p>Nächsten Termin in Sekunden anfragen – direkt aus dem Portal.</p></div></li>
+        </ul>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;align-items:center;">
+          <a href="https://winti-strings.vercel.app" target="_blank" rel="noopener" class="btn btn-primary" style="background:var(--c-primary);box-shadow:0 4px 14px rgba(15,124,58,.3);">Jetzt registrieren <span class="arrow">→</span></a>
+          <a href="https://winti-strings.vercel.app" target="_blank" rel="noopener" class="btn btn-outline">Mehr erfahren</a>
+        </div>
+        <p style="margin-top:16px;font-size:13px;color:var(--c-text-muted);">Bereits registriert? <a href="https://winti-strings.vercel.app" target="_blank" rel="noopener" style="color:var(--c-primary);font-weight:600;">Hier einloggen →</a></p>
+      </div>
+      <div class="logbuch-visual">
+        <div class="logbuch-card">
+          <div class="lc-header">
+            <span style="font-family:var(--font-display);font-weight:700;font-size:15px;color:var(--c-ink);">Mein Logbuch</span>
+            <span style="font-size:12px;color:var(--c-text-muted);">3 Einträge</span>
+          </div>
+          <div class="lc-entry">
+            <div class="lc-dot" style="background:#0f7c3a;"></div>
+            <div><div class="lc-name">Babolat RPM Blast</div><div class="lc-meta">24 kg · 18. Mai 2026</div></div>
+            <span class="lc-badge">Aktuell</span>
+          </div>
+          <div class="lc-entry">
+            <div class="lc-dot" style="background:#b5d92a;"></div>
+            <div><div class="lc-name">Luxilon 4G</div><div class="lc-meta">25 kg · 12. Feb 2026</div></div>
+          </div>
+          <div class="lc-entry">
+            <div class="lc-dot" style="background:#e0e1d8;"></div>
+            <div><div class="lc-name">Head Hawk Touch</div><div class="lc-meta">23 kg · 3. Nov 2025</div></div>
+          </div>
+          <div class="lc-rec">
+            <span style="font-size:18px;">🎯</span>
+            <div>
+              <div style="font-size:12px;font-weight:700;color:var(--c-primary);text-transform:uppercase;letter-spacing:.06em;">Empfehlung</div>
+              <div style="font-size:13px;color:var(--c-ink);font-weight:600;">Nächste Besaitung in ~3 Wochen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="testimonials">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div><span class="eyebrow">Kundenstimmen</span><h2 class="section-title">Was <em>andere</em> sagen.</h2></div>
+      <p class="section-lead">Echte Bewertungen von echten Spielern aus Winterthur.</p>
+    </div>
+    <div class="aggregate-bar" data-reveal>
+      <div><div class="big-rating">5.0</div><div class="stars-big">★★★★★</div></div>
+      <div class="info"><strong>10 Bewertungen</strong>100 % positiv · Stand Mai 2026</div>
+      <a href="#review-form" class="btn btn-outline">Bewertung abgeben <span class="arrow">→</span></a>
+    </div>
+    <div class="testimonial-grid" id="testimonial-grid"></div>
+    <div class="testimonial-toggle-wrap" id="testimonial-toggle-wrap" hidden>
+      <button type="button" class="testimonial-toggle" id="testimonial-toggle" aria-expanded="false">
+        <span class="label">Alle Bewertungen anzeigen</span><span class="chev">⌄</span>
+      </button>
+    </div>
+    <div class="review-form-card" id="review-form">
+      <h3>Bewertung hinterlassen</h3>
+      <p style="color:var(--c-text-muted);margin:8px 0 24px;font-size:14px;">Wird direkt per Mail an mich gesendet – nach kurzer Prüfung nehme ich sie auf.</p>
+      <form id="rev-form" novalidate>
+        <div class="calc-field"><label for="rv-name">Dein Name (optional)</label><input type="text" id="rv-name" autocomplete="name" placeholder="z. B. Max oder leer für anonym"></div>
+        <div class="calc-field"><label for="rv-club">Dein Tennisclub (optional)</label><input type="text" id="rv-club" placeholder="z. B. TC Winterthur"></div>
+        <div class="calc-field"><label>Sterne</label>
+          <div class="star-rate" id="rv-stars">
+            <button type="button" class="star-btn" data-v="1">★</button>
+            <button type="button" class="star-btn" data-v="2">★</button>
+            <button type="button" class="star-btn" data-v="3">★</button>
+            <button type="button" class="star-btn" data-v="4">★</button>
+            <button type="button" class="star-btn active" data-v="5">★</button>
+          </div>
+        </div>
+        <div class="calc-field"><label for="rv-text">Deine Bewertung</label><textarea id="rv-text" rows="4" required placeholder="Wie war dein Besaitungserlebnis?"></textarea></div>
+        <button type="submit" class="btn btn-primary btn-block">⭐ Bewertung absenden</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div><span class="eyebrow">FAQ</span><h2 class="section-title">Häufige <em>Fragen</em>.</h2></div>
+      <p class="section-lead">Alles was du vor deiner ersten Besaitung wissen solltest.</p>
+    </div>
+    <div class="faq-grid" id="faq-grid"></div>
+  </div>
+</section>
+
+<section class="section alt" id="booking">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div><span class="eyebrow">Buchung</span><h2 class="section-title">In 4 Klicks<br>zum <em>Termin</em>.</h2></div>
+      <p class="section-lead">Kein langes Hin-und-Her. Füll den Wizard aus – deine WhatsApp-Nachricht ist in 2 Minuten fertig.</p>
+    </div>
+    <div class="wizard" data-reveal>
+      <div style="margin-bottom:28px;">
+        <span class="eyebrow">4 Schritte · 2 Minuten</span>
+        <p style="margin:10px 0 0;color:var(--c-text-muted);font-size:15px;">Beantworte 4 kurze Fragen – fertige WhatsApp-Nachricht die du nur noch absenden musst.</p>
+      </div>
+      <div class="wizard-progress">
+        <div class="dot active">1</div><div class="line"></div>
+        <div class="dot">2</div><div class="line"></div>
+        <div class="dot">3</div><div class="line"></div>
+        <div class="dot">4</div>
+      </div>
+      <div id="wizard-content"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <div><span class="eyebrow">Kontakt</span><h2 class="section-title">So <em>erreichst</em> du mich.</h2></div>
+      <p class="section-lead">Antwort meistens innerhalb weniger Stunden. WhatsApp ist der schnellste Weg.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info-card" data-reveal>
+        <h3>Schnellster Weg: WhatsApp</h3>
+        <p>Antwort meistens innerhalb weniger Stunden, oft sofort.</p>
+        <div class="contact-info-item"><div class="ico">📱</div><div class="det"><div class="l">WhatsApp / Telefon</div><div class="v"><a href="tel:+41764423447">+41 76 442 34 47</a></div></div></div>
+        <div class="contact-info-item"><div class="ico">📍</div><div class="det"><div class="l">Standort</div><div class="v">Winterthur, Schweiz</div></div></div>
+        <div class="contact-info-item"><div class="ico">⏱️</div><div class="det"><div class="l">Bearbeitungszeit</div><div class="v">Meist innert 24 Stunden</div></div></div>
+        <div class="contact-info-item"><div class="ico">💳</div><div class="det"><div class="l">Zahlung</div><div class="v">Bar oder TWINT</div></div></div>
+        <a href="https://wa.me/41764423447?text=Hallo%20Rub%C3%A9n%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." class="btn btn-accent btn-block" style="margin-top:28px;color:#0a0d0c;">💬 Jetzt auf WhatsApp <span class="arrow">→</span></a>
+      </div>
+      <div class="contact-form-wrap" data-reveal>
+        <h3>Lieber per Mail?</h3>
+        <p>Auch kein Problem – schreib mir eine kurze Nachricht.</p>
+        <form id="contact-form" novalidate>
+          <div class="calc-field"><label for="cf-name">Dein Name</label><input type="text" id="cf-name" required autocomplete="name"></div>
+          <div class="calc-field"><label for="cf-contact">E-Mail oder Telefon</label><input type="text" id="cf-contact" required autocomplete="email"></div>
+          <div class="calc-field"><label for="cf-service">Service</label>
+            <select id="cf-service">
+              <option value="Bespannungs-Service (eigene Saiten) – CHF 35">Bespannungs-Service – CHF 35</option>
+              <option value="Komplettservice inkl. Premium-Saiten – CHF 55">Komplettservice – CHF 55</option>
+              <option value="Express-Service (+CHF 15)">Express-Service (+CHF 15)</option>
+              <option value="Hybrid-Besaitung">Hybrid-Besaitung</option>
+              <option value="Pro-Paket – CHF 75">Pro-Paket – CHF 75</option>
+              <option value="Pickup-Service per Velo-Kurier (+CHF 10)">Pickup-Service per Velo-Kurier (+CHF 10)</option>
+            </select>
+          </div>
+          <div class="calc-field"><label for="cf-msg">Nachricht (optional)</label><textarea id="cf-msg" rows="3"></textarea></div>
+          <button type="submit" class="btn btn-primary btn-block">✉️ Anfrage senden</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-mega">Winti<br><span class="accent">Strings.</span></div>
+  </div>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand"><span class="dot">🎾</span> Winti Strings</div>
+      <p>Professionelle Tennis-Schläger-Besaitung in Winterthur. Schnell, fair, persönlich – seit 2025.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#quiz">Saiten-Quiz</a></li>
+        <li><a href="#calc">Spannungs-Rechner</a></li>
+        <li><a href="#strings">Sortiment</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">Über mich</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <ul>
+        <li>📱 <a href="tel:+41764423447">+41 76 442 34 47</a></li>
+        <li>💬 <a href="https://wa.me/41764423447">WhatsApp</a></li>
+        <li>📍 Winterthur, Schweiz</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <span>© 2026 Winti Strings · Rubén Olano</span>
+    <span>Made with 🎾 in Winterthur</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/41764423447" class="fab-wa" aria-label="WhatsApp Chat öffnen">💬</a>
+
+<script>
+// ===== DATA =====
+const STRINGS = [
+  {brand:"Signum Pro",name:"Firestorm",    specs:"1.20 mm · Gold Metallic",spin:5,power:4,comfort:3,durability:4,tag:"spin",    player:"Topspin-Spieler", tension:"22–26 kg",desc:"Achteckige Polyester-Saite für maximalen Spin. Ideal für aggressive Grundlinienspieler mit viel Drall."},
+  {brand:"Signum Pro",name:"Xperience",    specs:"1.18 mm · Grün",         spin:4,power:3,comfort:4,durability:3,tag:"allround",player:"Allrounder",     tension:"22–25 kg",desc:"Vielseitige Co-Poly-Saite mit gutem Ballgefühl. Perfekt für Kontrolle und Komfort."},
+  {brand:"Signum Pro",name:"Xperience",    specs:"1.24 mm · Grün",         spin:4,power:3,comfort:5,durability:4,tag:"comfort", player:"Komfort-Spieler", tension:"21–25 kg",desc:"Dickere Version der Xperience – noch arm-schonender. Empfohlen bei Tennisarm-Problemen."},
+  {brand:"Babolat",   name:"XCEL",         specs:"1.25 mm · Schwarz",      spin:3,power:5,comfort:5,durability:3,tag:"comfort", player:"Power & Komfort", tension:"21–24 kg",desc:"Multifilament mit viel Power und hohem Komfort. Beliebt bei Freizeitspielern und sensiblen Armen."},
+  {brand:"Babolat",   name:"RPM Blast",    specs:"1.20 mm · Schwarz",      spin:5,power:4,comfort:2,durability:4,tag:"spin",    player:"Topspin-Spieler", tension:"23–27 kg",desc:"Einer der beliebtesten Strings der Welt. Oktagonales Co-Poly für extremen Topspin – wie Nadal."},
+  {brand:"Babolat",   name:"RPM Blast",    specs:"1.25 mm · Schwarz",      spin:5,power:4,comfort:3,durability:5,tag:"spin",    player:"Topspin-Spieler", tension:"23–27 kg",desc:"Dickere Version – mehr Haltbarkeit bei gleich hohem Spin. Ideal für Saitenbrecher."},
+  {brand:"Babolat",   name:"RPM Rough",    specs:"1.25 mm · Rot",          spin:5,power:3,comfort:2,durability:5,tag:"spin",    player:"Spin-Spieler",    tension:"23–27 kg",desc:"Geriffelte Oberfläche für nochmals mehr Spin. Sehr bissig und kontrolliert."},
+  {brand:"Topspin",   name:"Max Rotation", specs:"1.27 mm · Schwarz",      spin:5,power:4,comfort:2,durability:5,tag:"spin",    player:"Topspin-Spieler", tension:"22–26 kg",desc:"Deutsche Qualität mit maximaler Rotation. Sehr haltbar für intensive Trainingseinheiten."},
+  {brand:"Topspin",   name:"Premium Touch",specs:"1.20 mm · Schwarz",      spin:3,power:4,comfort:5,durability:3,tag:"touch",   player:"Touch & Gefühl",  tension:"20–24 kg",desc:"Multifilament für feines Ballgefühl. Top-Wahl für Netz- und Slice-Spieler."},
+  {brand:"Head",      name:"Hawk Touch",   specs:"1.25 mm · Grau",         spin:4,power:4,comfort:4,durability:4,tag:"allround",player:"Allrounder",      tension:"22–26 kg",desc:"Ausgewogene Co-Poly mit gutem Mix aus Spin, Power und Komfort. Für fast jeden Spielertyp."},
+  {brand:"Luxilon",   name:"4G",           specs:"1.25 mm · Gold",         spin:4,power:4,comfort:2,durability:5,tag:"power",   player:"Power-Spieler",   tension:"23–27 kg",desc:"Profi-Saite von Luxilon – extrem haltbar mit präziser Kontrolle. Von vielen ATP-Profis gespielt."},
+];
+
+const TESTIMONIALS = [
+  {name:"Nico",        initials:"NI",text:"Schnell, unkompliziert, super Beratung und Top Ergebnis!",date:"19. Mai 2026"},
+  {name:"Luca",        initials:"LU",text:"Super Beratung, einfache Kommunikation per Whatsapp und ein sehr zufriedenstellendes Ergebnis – die neue Bespannung macht richtig Spass!",date:"19. Mai 2026"},
+  {name:"Tim",         initials:"TI",text:"Meine Saite konnte auf spontane Anfrage noch einen Tag vor meinem Match bespannt werden! Top Qualität und super Service! 🤝🏼🎾",date:"18. Mai 2026"},
+  {name:"Yanick",      initials:"YA",text:"Persönliche Beratung, ultra schneller Service, faire Preise und das Endprodukt war der Hammer. Werde in der Zukunft nur noch bei Rubén bespannen lassen!",date:"Mai 2026"},
+  {name:"Pino",        initials:"PI",text:"Super Beratung bei der Wahl der Saiten und der passenden Bespannungshärte. Top verarbeitet. Mein Bespanner des Vertrauens!",date:"Mai 2026"},
+  {name:"Micha",       initials:"MI",text:"Zufrieden mit dem Resultat, gute Beratung!",date:"Mai 2026"},
+  {name:"Paul Klöpper",initials:"PK",text:"Super Beratung und super Saite! Alles einwandfrei. Ging Mega schnell!",date:"Mai 2026"},
+  {name:"José",        initials:"JO",text:"Sehr hilfreiche Beratung und ein schneller Service. Ein super Gefühl beim Spielen mit der neuen Bespannung!",date:"Mai 2026"},
+  {name:"Tomi",        initials:"TO",text:"Top Beratung, unkomplizierte und sympathische Kommunikation. Der beste Bespannungservice in Winterthur!",date:"21. Mai 2026"},
+  {name:"Samuel",      initials:"SA",text:"Ruben konnte sehr hilfreich beraten. Seine Bespannung hat mein Spiel verbessert.",date:"21. Mai 2026"},
+];
+
+const FAQ = [
+  {q:"Wie lange dauert eine Besaitung?",a:"Ca. 30–45 Minuten. In der Regel innert 24 Stunden zurück, oft gleichentags."},
+  {q:"Welche Saiten-Spannung soll ich wählen?",a:"Das hängt von Spielstil, Schläger und Arm-Empfindlichkeit ab. Nutze den Rechner oben – die finale Empfehlung justiere ich im Gespräch."},
+  {q:"Wann sollte ich meinen Schläger neu besaiten?",a:"Faustregel: So oft pro Jahr wie du pro Woche spielst. Polyester verliert Spannung schon nach 10–15 Stunden Spielzeit."},
+  {q:"Kann ich eigene Saiten mitbringen?",a:"Klar! Mit eigenen Saiten CHF 30. Du kannst online bestellen oder ich berate dich vorher."},
+  {q:"Was ist eine Hybrid-Besaitung?",a:"Zwei verschiedene Saiten: eine für Längs- (Mains) und eine für Querbespannung (Crosses). Klassisch: Polyester längs für Spin + Multifilament quer für Komfort."},
+  {q:"Bietest du Express-Besaitung an?",a:"Ja, bei Dringlichkeit in 4–8 h möglich – kleiner Aufpreis nach Absprache."},
+  {q:"Wo finde ich dich in Winterthur?",a:"Genauer Standort per WhatsApp – ich bin sehr flexibel mit Abhol-/Bring-Modalitäten."},
+  {q:"Wie bezahle ich?",a:"Bar oder TWINT direkt bei Abholung."},
+  {q:"Besaitest du auch Badminton- oder Squash-Schläger?",a:"Aktuell auf Tennis spezialisiert. Frag kurz – ich empfehle ggf. weiter."},
+  {q:"Was kostet eine Premium-Saite?",a:"Mit Komplettservice (CHF 50) bereits inbegriffen – kein Aufpreis."},
+  {q:"Gibt es Stammkundenrabatte?",a:"Ab der 4. Besaitung gibt's eine kleine Überraschung – frag bei der Übergabe nach!"},
+];
+
+const SHOP = [
+  {name:"Vibrationsdämpfer – Wilson Shock Trap",  tag:"Schläger-Zubehör", desc:"Nicht irgendein Gummiring. Der Shock Trap absorbiert Vibrationen spürbar – dein Arm wird es dir danken.", link:"https://www.tennis-point.com/products/wilson-shock-trap-dampener-1-pack-multicolouredblack-00772601932000"},
+  {name:"Overgrip – Tourna Mega Tac 30 Pack",     tag:"Grip & Kontrolle",  desc:"Mega Tac klebt wie nichts anderes. Maximaler Halt auch bei schweissnassen Händen.", link:"https://www.tennis-point.com/products/tourna-mega-tac-30-pack-white-03064001273000"},
+  {name:"Overgrip – Tourna Grip Tour XL 50 Pack", tag:"Grip & Kontrolle",  desc:"Der Klassiker. 50 Stück, extra lang, extra saugfähig. Der meistgenutzte Overgrip auf der Tour.", link:"https://www.tennis-point.com/products/tourna-grip-tour-xl-50-pack-blue-03063901264000"},
+  {name:"Resistance Band – Toolz Terra Band XH",  tag:"Training Gadget",   desc:"Venus Williams' Geheimnis für starke Schultern. Stärkt die Muskeln die du für einen kraftvollen Aufschlag brauchst.", link:"https://www.tennis-point.com/products/toolz-terra-band-xh-extra-heavy-tapes-black-16075200100000"},
+  {name:"Lead Tape – Gamma 12,7mm",               tag:"Schläger tunen",    desc:"Klebe gezielt Gewicht an deinen Schläger – mehr Stabilität, Schwungkraft und präzisere Schläge. Selbstklebend, einfach anzuwenden.", link:"https://www.tennis-point.com/products/gamma-lead-tape-1-roll-127mm-silver-14573400050000"},
+  {name:"Basisgriff – Tourna Genuine Leather",    tag:"Replacement Grip",  desc:"Leder statt Plastik. Wer einmal einen echten Ledergriff gespielt hat, will nichts anderes mehr.", link:"https://www.tennis-point.com/products/tourna-genuine-leather-1-pack-brown-03064001276000"},
+  {name:"Nike Zoom Vapor Pro 3 – Sand",           tag:"Schuhe · Clay",     desc:"Der Schuh den Profis auf Sand spielen. Präziser Halt, explosiver Abdruck, made for clay.", link:"https://www.tennis-point.com/products/nike-zoom-vapor-pro-3-clay-court-shoe-men-apricot-white-00417017940000"},
+  {name:"Nike Zoom Vapor Pro 3 – Allcourt",       tag:"Schuhe · Allcourt", desc:"Einer für alles. Grip und Stabilität auf jedem Belag ohne Kompromisse.", link:"https://www.tennis-point.com/products/nike-zoom-vapor-pro-3-all-court-shoe-men-grey-sage-a0000003340303"},
+  {name:"Nike Dri-Fit RAFA Cap – Yellow",         tag:"Cap",               desc:"Rafas Signature-Cap in Electric Yellow. Schützt, sitzt perfekt, macht auf dem Court was her.", link:"https://www.tennis-point.com/products/nike-dri-fit-rafa-cap-unisex-yellow-00446858453000"},
+  {name:"Nike Dri-Fit 4.0 Bandana – White/Black", tag:"Bandana",           desc:"Feuchtigkeitsableitend und leicht. Der klassische Zweiteiler in White/Black.", link:"https://www.tennis-point.com/products/nike-dri-fit-40-bandana-whiteblack-00445653581000"},
+  {name:"Dunlop Pro Wheelie Travel Bag",          tag:"Reisetasche",       desc:"Platz für Schläger, Schuhe, Outfit und mehr. Die perfekte Begleiterin für Turniere und Tennisferien.", link:"https://www.tennis-point.com/products/dunlop-pro-wheelie-travel-bag-blackwhite-01635401526000"},
+];
+
+// ===== UTILS =====
+function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function barRow(l,v){return `<div class="bar-row"><span class="lbl">${l}</span><div class="bar"><span style="width:${v*20}%"></span></div></div>`;}
+
+
+
+// ===== SOUND =====
+let audioCtx=null;
+function playPing(){
+  try{
+    if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+    const o=audioCtx.createOscillator();
+    const g=audioCtx.createGain();
+    o.connect(g);g.connect(audioCtx.destination);
+    o.type='sine';
+    o.frequency.setValueAtTime(880,audioCtx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(440,audioCtx.currentTime+0.3);
+    g.gain.setValueAtTime(0.18,audioCtx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001,audioCtx.currentTime+0.5);
+    o.start(audioCtx.currentTime);
+    o.stop(audioCtx.currentTime+0.5);
+  }catch(e){}
+}
+function pingRipple(e){
+  const r=document.createElement('div');
+  r.className='ping-ripple';
+  const s=60;
+  r.style.cssText=`width:${s}px;height:${s}px;left:${e.clientX-s/2}px;top:${e.clientY-s/2}px;`;
+  document.body.appendChild(r);
+  setTimeout(()=>r.remove(),700);
+}
+
+// ===== NAV =====
+document.getElementById('menuToggle').addEventListener('click',e=>{const l=document.getElementById('navLinks');const o=l.classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',o);});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('navLinks').classList.remove('open');}));
+
+// ===== STRINGS =====
+(function(){
+  const g=document.getElementById('strings-grid');
+  STRINGS.forEach((s,i)=>{
+    const c=document.createElement('div');c.className='string-card';
+    const n=String(i+1).padStart(2,'0');
+    c.innerHTML=`
+      <div class="string-row">
+        <div class="num">${n}</div>
+        <div><div class="brand">${s.brand}</div><div class="name">${s.name}</div><div class="specs">${s.specs}</div></div>
+        <div class="specs-col"><div class="string-bars">${barRow('Spin',s.spin)}${barRow('Power',s.power)}${barRow('Komfort',s.comfort)}${barRow('Haltbarkeit',s.durability)}</div></div>
+        <div class="arrow-col">→</div>
+      </div>
+      <div class="string-detail" id="sd-${i}">
+        <div class="sd-item"><div class="sd-label">Beschreibung</div><div class="sd-val">${s.desc}</div></div>
+        <div class="sd-item"><div class="sd-label">Ideal für</div><div class="sd-val">${s.player}</div></div>
+        <div class="sd-item"><div class="sd-label">Empf. Spannung</div><div class="sd-val">${s.tension}</div></div>
+      </div>`;
+    c.addEventListener('click',e=>{
+      const det=document.getElementById(`sd-${i}`);
+      const open=det.classList.toggle('visible');
+      c.classList.toggle('open',open);
+      if(open){playPing();pingRipple(e);}
+    });
+    g.appendChild(c);
+  });
+})();
+
+// ===== SHOP =====
+(function(){
+  const list=document.getElementById('shop-list');
+  SHOP.forEach((p,i)=>{
+    const item=document.createElement('div');item.className='shop-item';
+    item.innerHTML=`<div class="si-num">${String(i+1).padStart(2,'0')}</div><div class="si-body"><div class="si-name">${p.name}</div><div class="si-desc">${p.desc}</div><span class="si-tag">${p.tag}</span></div><a href="${p.link}" target="_blank" rel="noopener" class="si-cta">Bei Tennis-Point <span class="arrow">→</span></a>`;
+    list.appendChild(item);
+  });
+})();
+
+// ===== TESTIMONIALS =====
+const TESTIMONIAL_INITIAL=3;
+(function(){
+  const g=document.getElementById('testimonial-grid');
+  TESTIMONIALS.forEach((t,i)=>{
+    const c=document.createElement('article');c.className='testimonial'+(i>=TESTIMONIAL_INITIAL?' t-hidden':'');
+    c.innerHTML=`<div class="stars">★★★★★</div><blockquote>${escapeHtml(t.text)}</blockquote><div class="author"><div class="avatar">${t.initials}</div><div class="meta"><div class="name">${escapeHtml(t.name)}</div><div class="date">${t.date}</div></div></div>`;
+    g.appendChild(c);
+  });
+  const wrap=document.getElementById('testimonial-toggle-wrap');
+  const btn=document.getElementById('testimonial-toggle');
+  if(TESTIMONIALS.length>TESTIMONIAL_INITIAL){
+    wrap.hidden=false;
+    const hc=TESTIMONIALS.length-TESTIMONIAL_INITIAL;
+    btn.querySelector('.label').textContent=`Alle ${TESTIMONIALS.length} Bewertungen (+${hc})`;
+    btn.addEventListener('click',()=>{
+      const exp=btn.classList.toggle('expanded');
+      btn.setAttribute('aria-expanded',exp);
+      btn.querySelector('.label').textContent=exp?'Weniger anzeigen':`Alle ${TESTIMONIALS.length} Bewertungen (+${hc})`;
+      g.querySelectorAll('.testimonial').forEach((c,i)=>c.classList.toggle('t-hidden',!exp&&i>=TESTIMONIAL_INITIAL));
+      if(!exp)document.getElementById('testimonials').scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  }
+})();
+
+// ===== FAQ =====
+(function(){const g=document.getElementById('faq-grid');FAQ.forEach(f=>{const d=document.createElement('details');d.className='faq-item';d.innerHTML=`<summary>${escapeHtml(f.q)}</summary><div class="faq-body">${escapeHtml(f.a)}</div>`;g.appendChild(d);});})();
+
+// ===== QUIZ =====
+const QUIZ_QUESTIONS=[
+  {q:"Wie würdest du deinen Spielstil beschreiben?",opts:[{emoji:"💥",title:"Power-Spieler",sub:"Flache, harte Schläge",tags:["power"]},{emoji:"🌀",title:"Topspin-Spieler",sub:"Viel Drall, hohe Bälle",tags:["spin"]},{emoji:"🎯",title:"Allrounder",sub:"Variabel, vielseitig",tags:["allround"]},{emoji:"🤲",title:"Touch / Slice",sub:"Gefühl, Netzspiel",tags:["touch","comfort"]}]},
+  {q:"Was ist dir wichtiger?",opts:[{emoji:"⚡",title:"Maximaler Spin",sub:"Drall vor Power",tags:["spin"]},{emoji:"🚀",title:"Mehr Power",sub:"Bälle weit & hart",tags:["power"]},{emoji:"☁️",title:"Komfort & Ballgefühl",sub:"Arm-schonend",tags:["comfort","touch"]},{emoji:"🛡️",title:"Haltbarkeit",sub:"Lange Spielzeit",tags:["durable"]}]},
+  {q:"Wie ist deine Arm-Empfindlichkeit?",opts:[{emoji:"💪",title:"Robust",sub:"Keine Probleme",tags:["any"]},{emoji:"🙂",title:"Normal",sub:"Etwas Komfort gut",tags:["allround","comfort"]},{emoji:"🤕",title:"Sensibel",sub:"Tennisarm-anfällig",tags:["comfort","touch"]}]},
+  {q:"Wie oft spielst du pro Woche?",opts:[{emoji:"1️⃣",title:"1× pro Woche",sub:"Gelegenheits-Spieler",tags:["comfort"]},{emoji:"3️⃣",title:"2–3× pro Woche",sub:"Aktiv",tags:["allround"]},{emoji:"🔥",title:"4×+ pro Woche",sub:"Viel/intensiv",tags:["durable","spin"]}]},
+];
+let quizStep=0,quizTags=[];
+function renderQuiz(){
+  const c=document.getElementById('quiz-container');
+  const prog=document.querySelectorAll('.quiz-progress .step');
+  if(quizStep>=QUIZ_QUESTIONS.length){
+    prog.forEach(p=>p.classList.add('done'));
+    const rec=recommendString(quizTags);
+    c.innerHTML=`<div class="quiz-result"><h4>Meine Empfehlung für dich</h4><div class="name">${rec.brand} ${rec.name}</div><div class="sub">${rec.specs}</div><div class="string-bars" style="margin-top:14px;">${barRow('Spin',rec.spin)}${barRow('Power',rec.power)}${barRow('Komfort',rec.comfort)}${barRow('Haltbarkeit',rec.durability)}</div><div class="quiz-actions"><a href="https://wa.me/41764423447?text=${encodeURIComponent('Hallo Rubén, das Quiz hat mir '+rec.brand+' '+rec.name+' empfohlen. Termin?')}" class="btn btn-accent" style="color:#0a0d0c;">💬 Diese Saite anfragen <span class="arrow">→</span></a><button class="quiz-restart" onclick="quizStep=0;quizTags=[];document.querySelectorAll('.quiz-progress .step').forEach((p,i)=>p.classList.toggle('done',i===0));renderQuiz();">↻ Neu starten</button></div></div>`;
+    return;
+  }
+  prog.forEach((p,i)=>p.classList.toggle('done',i<=quizStep));
+  const q=QUIZ_QUESTIONS[quizStep];
+  c.innerHTML=`<div class="quiz-question">${quizStep+1}/${QUIZ_QUESTIONS.length} · ${q.q}</div><div class="quiz-options">${q.opts.map((o,i)=>`<button class="quiz-option" data-i="${i}"><span class="emoji">${o.emoji}</span><span class="text"><strong>${o.title}</strong><span>${o.sub}</span></span></button>`).join('')}</div>`;
+  c.querySelectorAll('.quiz-option').forEach(btn=>btn.addEventListener('click',()=>{quizTags=quizTags.concat(QUIZ_QUESTIONS[quizStep].opts[+btn.dataset.i].tags);quizStep++;renderQuiz();}));
+}
+renderQuiz();
+function recommendString(tags){const sc={spin:'spin',power:'power',comfort:'comfort',touch:'comfort',durable:'durability',allround:null};const scored=STRINGS.map(s=>{let score=0;tags.forEach(t=>{if(t==='any')return;if(t===s.tag)score+=3;const d=sc[t];if(d&&s[d])score+=s[d];});return{...s,score};});scored.sort((a,b)=>b.score-a.score||b.durability-a.durability);return scored[0];}
+
+// ===== TENSION CALC =====
+function calcTension(){
+  const base=23;
+  const adj=parseFloat(document.getElementById('ts-style').value)+parseFloat(document.getElementById('ts-head').value)+parseFloat(document.getElementById('ts-arm').value)+parseFloat(document.getElementById('ts-string').value);
+  const v=base+adj;
+  const el=document.getElementById('ts-value');
+  el.textContent=v.toFixed(1);
+  el.classList.remove('pop');void el.offsetWidth;el.classList.add('pop');
+  document.getElementById('ts-range').textContent=`Bereich: ${(v-1).toFixed(1)} – ${(v+1).toFixed(1)} kg`;
+  let tip="Bei Unsicherheit immer mit der Standard-Spannung starten.";
+  if(v<21)tip="Sehr tiefe Spannung – viel Power und Komfort, weniger Kontrolle.";
+  else if(v>25)tip="Höhere Spannung – mehr Kontrolle, weniger Power.";
+  document.getElementById('ts-tip').textContent="💡 "+tip;
+}
+document.querySelectorAll('#calc select').forEach(s=>s.addEventListener('change',calcTension));
+calcTension();
+
+// ===== WIZARD =====
+const WD={service:'',cost:'',addons:[],string:'',tension:'',urgency:'',name:''};
+let wizardStep=1;
+function renderWizard(){
+  document.querySelectorAll('.wizard-progress .dot').forEach((d,i)=>{d.classList.toggle('done',i+1<wizardStep);d.classList.toggle('active',i+1===wizardStep);});
+  document.querySelectorAll('.wizard-progress .line').forEach((l,i)=>l.classList.toggle('done',i+1<wizardStep));
+  const c=document.getElementById('wizard-content');
+  if(wizardStep===1){
+    const main=[
+      {v:'Bespannungs-Service (eigene Saiten)',e:'🎯',t:'Eigene Saiten',s:'CHF 35',cost:'CHF 35'},
+      {v:'Komplettservice (inkl. Premium-Saiten)',e:'✨',t:'Komplett-Paket',s:'CHF 55',cost:'CHF 55'},
+      {v:'Pro-Paket',e:'👑',t:'Pro-Paket',s:'CHF 75',cost:'CHF 75'},
+      {v:'Hybrid-Besaitung',e:'🧪',t:'Hybrid',s:'Auf Anfrage',cost:'auf Anfrage'},
+    ];
+    const extras=[
+      {v:'Express-Service',e:'🚀',t:'Express',s:'+CHF 15'},
+      {v:'Pickup-Service per Velo-Kurier',e:'🚲',t:'Velo-Kurier',s:'+CHF 10'},
+    ];
+    c.innerHTML=`
+      <div class="wizard-step active">
+        <h3>1. Welcher Service?</h3>
+        <p class="step-sub">Wähle deinen Hauptservice – danach kannst du optional Express oder Velo-Kurier dazunehmen.</p>
+        <div class="quiz-options" style="grid-template-columns:1fr 1fr;margin-bottom:20px;" id="wz-main">
+          ${main.map(o=>`<button class="quiz-option" data-val="${escapeHtml(o.v)}" data-cost="${o.cost}"><span class="emoji">${o.e}</span><span class="text"><strong>${o.t}</strong><span>${o.s}</span></span></button>`).join('')}
+        </div>
+        <p style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--c-text-muted);margin:0 0 10px;">Optionale Add-ons</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;" id="wz-extras">
+          ${extras.map(o=>`<button class="quiz-option wz-extra" data-val="${escapeHtml(o.v)}" style="opacity:.5;border-style:dashed;"><span class="emoji">${o.e}</span><span class="text"><strong>${o.t}</strong><span>${o.s}</span></span></button>`).join('')}
+        </div>
+        <button class="btn btn-primary btn-block" id="wz-step1-next" style="margin-top:20px;opacity:.4;pointer-events:none;">Weiter →</button>
+      </div>`;
+
+    // Hauptservice Logik
+    c.querySelectorAll('#wz-main .quiz-option').forEach(b=>{
+      b.addEventListener('click',()=>{
+        c.querySelectorAll('#wz-main .quiz-option').forEach(x=>{x.style.borderColor='';x.style.background='';});
+        b.style.borderColor='var(--c-ink)';
+        b.style.background='var(--c-surface-2)';
+        WD.service=b.dataset.val;
+        WD.cost=b.dataset.cost;
+        const next=document.getElementById('wz-step1-next');
+        next.style.opacity='1';
+        next.style.pointerEvents='auto';
+      });
+    });
+
+    // Add-ons Logik
+    c.querySelectorAll('.wz-extra').forEach(b=>{
+      b.addEventListener('click',()=>{
+        const val=b.dataset.val;
+        const active=WD.addons.includes(val);
+        if(active){
+          WD.addons=WD.addons.filter(x=>x!==val);
+          b.style.opacity='.5';
+          b.style.borderStyle='dashed';
+          b.style.borderColor='';
+          b.style.background='';
+        }else{
+          WD.addons.push(val);
+          b.style.opacity='1';
+          b.style.borderStyle='solid';
+          b.style.borderColor='var(--c-ink)';
+          b.style.background='var(--c-surface-2)';
+        }
+      });
+    });
+
+    document.getElementById('wz-step1-next').addEventListener('click',()=>{
+      if(!WD.service)return;
+      wizardStep=2;renderWizard();
+    });
+  }else if(wizardStep===2){
+    c.innerHTML=`<div class="wizard-step active"><h3>2. Saite</h3><p class="step-sub">Hast du schon eine im Kopf?</p><div class="calc-field"><label>Saite (optional)</label><select id="wz-string"><option value="Beratung erwünscht">— Bitte berate mich —</option>${STRINGS.map(s=>`<option value="${escapeHtml(s.brand+' '+s.name+' '+s.specs)}">${s.brand} · ${s.name}</option>`).join('')}<option value="Eigene Saite">Eigene Saite (bringe ich mit)</option></select></div><div class="wizard-controls"><button class="btn btn-back" onclick="wizardStep=1;renderWizard();">← Zurück</button><button class="btn btn-primary" id="wz-next2">Weiter →</button></div></div>`;
+    document.getElementById('wz-next2').addEventListener('click',()=>{WD.string=document.getElementById('wz-string').value;wizardStep=3;renderWizard();});
+  }else if(wizardStep===3){
+    c.innerHTML=`<div class="wizard-step active"><h3>3. Spannung & Dringlichkeit</h3><p class="step-sub">Wunschspannung falls bekannt.</p><div class="calc-field"><label>Spannung (optional)</label><input type="text" id="wz-tension" placeholder="z. B. 23 kg oder leer"></div><div class="calc-field"><label>Wann brauchst du den Schläger?</label><select id="wz-urg"><option value="Innert 1 Woche">Innert 1 Woche</option><option value="Innert 24-48h">Innert 24–48 h</option><option value="Heute / Express">Heute / Express</option></select></div><div class="wizard-controls"><button class="btn btn-back" onclick="wizardStep=2;renderWizard();">← Zurück</button><button class="btn btn-primary" id="wz-next3">Weiter →</button></div></div>`;
+    document.getElementById('wz-next3').addEventListener('click',()=>{WD.tension=document.getElementById('wz-tension').value||'auf Empfehlung';WD.urgency=document.getElementById('wz-urg').value;wizardStep=4;renderWizard();});
+  }else if(wizardStep===4){
+    const msg=buildMsg();
+    c.innerHTML=`<div class="wizard-step active"><h3>4. Termin per WhatsApp</h3><p class="step-sub">Optional dein Name – dann ist alles vorausgefüllt.</p><div class="calc-field"><label>Dein Name (optional)</label><input type="text" id="wz-name" placeholder="z. B. Max"></div><div class="calc-field"><label>Vorschau</label><div class="preview-box" id="wz-preview">${escapeHtml(msg)}</div></div><div class="wizard-controls"><button class="btn btn-back" onclick="wizardStep=3;renderWizard();">← Zurück</button><a href="https://wa.me/41764423447?text=${encodeURIComponent(msg)}" id="wz-send" class="btn btn-whatsapp" style="flex:1;text-decoration:none;">💬 In WhatsApp öffnen →</a></div></div>`;
+    document.getElementById('wz-name').addEventListener('input',e=>{WD.name=e.target.value;const m=buildMsg();document.getElementById('wz-preview').textContent=m;document.getElementById('wz-send').href='https://wa.me/41764423447?text='+encodeURIComponent(m);});
+  }
+}
+function buildMsg(){
+  const g=WD.name?`Hallo Rubén, hier ist ${WD.name}.`:'Hallo Rubén,';
+  const addons=WD.addons.length>0?`\n➕ Add-ons: ${WD.addons.join(', ')}`:'';
+
+  // Gesamtpreis berechnen
+  const priceMap={
+    'Bespannungs-Service (eigene Saiten)':35,
+    'Komplettservice (inkl. Premium-Saiten)':55,
+    'Pro-Paket':75,
+    'Hybrid-Besaitung':null,
+    'Express-Service':15,
+    'Pickup-Service per Velo-Kurier':10,
+  };
+  let total=0;
+  let hasNull=false;
+  const basePrice=priceMap[WD.service];
+  if(basePrice===null)hasNull=true;
+  else total+=basePrice||0;
+  WD.addons.forEach(a=>{
+    const p=priceMap[a];
+    if(p===null)hasNull=true;
+    else total+=p||0;
+  });
+  const totalStr=hasNull?`ca. CHF ${total}+ (Hybrid auf Anfrage)`:`CHF ${total}`;
+
+  return`${g}\nIch möchte einen Besaitungstermin:\n🎯 Service: ${WD.service||'–'}${addons}\n🧵 Saite: ${WD.string||'–'}\n⚙️ Spannung: ${WD.tension||'–'}\n⏱️ Wann: ${WD.urgency||'–'}\n\n💰 Gesamtpreis: ${totalStr}\n\nWann passt es? Danke!`;
+}
+renderWizard();
+
+// ===== FORMSPREE =====
+const FP='https://formspree.io/f/mnjweqbe';
+const GR='https://g.page/r/CaqI6tVlVeicEAI/review';
+async function send(p){const r=await fetch(FP,{method:'POST',headers:{'Accept':'application/json','Content-Type':'application/json'},body:JSON.stringify(p)});if(!r.ok){const e=await r.json().catch(()=>({}));throw new Error(e.error||'Fehler');}return r.json();}
+
+document.getElementById('contact-form').addEventListener('submit',async e=>{
+  e.preventDefault();const f=e.currentTarget;
+  const name=document.getElementById('cf-name').value.trim();const contact=document.getElementById('cf-contact').value.trim();const service=document.getElementById('cf-service').value;const msg=document.getElementById('cf-msg').value.trim();
+  if(!name||!contact){alert('Bitte Name und Kontakt angeben.');return;}
+  const btn=f.querySelector('button[type="submit"]');const orig=btn.innerHTML;btn.disabled=true;btn.innerHTML='⏳ Wird gesendet…';
+  try{await send({_subject:`[Winti Strings] Anfrage von ${name}`,_replyto:contact,name,kontakt:contact,service,nachricht:msg||'–'});f.innerHTML=`<div style="text-align:center;padding:20px;"><div style="font-size:56px;">✅</div><h3 style="font-family:var(--font-display);color:var(--c-ink);">Anfrage gesendet!</h3><p style="color:var(--c-text-muted);">Danke, ${escapeHtml(name)} – ich melde mich bald.</p><a href="https://wa.me/41764423447" class="btn btn-whatsapp" style="display:inline-flex;margin-top:12px;">💬 WhatsApp →</a></div>`;}
+  catch(err){btn.disabled=false;btn.innerHTML=orig;alert('Fehler: '+err.message);}
+});
+
+let reviewStars=5;
+document.querySelectorAll('#rv-stars .star-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{reviewStars=+btn.dataset.v;document.querySelectorAll('#rv-stars .star-btn').forEach(b=>b.classList.toggle('active',+b.dataset.v<=reviewStars));});
+  btn.addEventListener('mouseenter',()=>{document.querySelectorAll('#rv-stars .star-btn').forEach(b=>b.classList.toggle('hover',+b.dataset.v<=+btn.dataset.v));});
+});
+document.getElementById('rv-stars').addEventListener('mouseleave',()=>document.querySelectorAll('#rv-stars .star-btn').forEach(b=>b.classList.remove('hover')));
+
+document.getElementById('rev-form').addEventListener('submit',async e=>{
+  e.preventDefault();const f=e.currentTarget;
+  const name=document.getElementById('rv-name').value.trim()||'Anonym';
+  const club=document.getElementById('rv-club').value.trim();
+  const text=document.getElementById('rv-text').value.trim();
+  if(!text){alert('Bitte eine Bewertung schreiben.');return;}
+  const btn=f.querySelector('button[type="submit"]');const orig=btn.innerHTML;btn.disabled=true;btn.innerHTML='⏳ Wird gesendet…';
+  try{await send({_subject:`[Winti Strings] Bewertung (${reviewStars}★) von ${name}`,name,club:club||'–',sterne:reviewStars+'/5 '+'★'.repeat(reviewStars)+'☆'.repeat(5-reviewStars),bewertung:text,datum:new Date().toLocaleDateString('de-CH',{year:'numeric',month:'long',day:'numeric'})});
+  f.innerHTML=`<div style="text-align:center;padding:10px 0;"><div style="font-size:56px;">🎾✨</div><h3 style="font-family:var(--font-display);color:var(--c-ink);">Vielen Dank, ${escapeHtml(name)}!</h3><p style="color:var(--c-text-muted);">Bewertung angekommen – ich nehme sie nach Prüfung auf.</p><div style="background:var(--c-ink);color:#fff;border-radius:var(--r-lg);padding:24px;margin:20px 0;"><h4 style="font-family:var(--font-display);color:#fff;margin:0 0 8px;">Auch auf Google? ⭐</h4><p style="color:rgba(255,255,255,.7);font-size:13px;margin:0 0 16px;">Hilft mir enorm bei neuen Spielern gefunden zu werden.</p><a href="${GR}" target="_blank" class="btn btn-accent" style="display:inline-flex;color:#0a0d0c;">🌟 Auf Google bewerten →</a></div></div>`;}
+  catch(err){btn.disabled=false;btn.innerHTML=orig;alert('Fehler: '+err.message);}
+});
+
+// ===== COUNTER =====
+(function(){const el=document.getElementById('stat-rackets');if(!el)return;const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){let c=0;const t=setInterval(()=>{c=Math.min(120,c+3);el.textContent=c+(c>=120?'+':'');if(c>=120)clearInterval(t);},30);obs.unobserve(el);}});});obs.observe(el);})();
+
+// ===== REVEAL =====
+(function(){const els=document.querySelectorAll('[data-reveal]');if(!('IntersectionObserver' in window)){els.forEach(el=>el.classList.add('in'));return;}const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');obs.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(el=>obs.observe(el));})();
+</script>
+</body>
 </html>
