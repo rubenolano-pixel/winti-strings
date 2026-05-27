@@ -814,10 +814,14 @@ footer.site-footer { background: var(--c-ink); color: rgba(255,255,255,.7); padd
           <li><span class="logbuch-icon">📅</span><div><strong>Direkte Terminanfrage via WhatsApp</strong><p>Nächsten Termin in Sekunden anfragen – direkt aus dem Portal.</p></div></li>
         </ul>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;align-items:center;">
-          <a href="https://winti-strings-logbuch-portal.vercel.app" target="_blank" rel="noopener" class="btn btn-primary" style="background:var(--c-primary);box-shadow:0 4px 14px rgba(15,124,58,.3);">Jetzt registrieren <span class="arrow">→</span></a>
-          <a href="https://winti-strings-logbuch-portal.vercel.app" target="_blank" rel="noopener" class="btn btn-outline">Mehr erfahren</a>
+          <span class="btn btn-primary" style="background:var(--c-primary);box-shadow:0 4px 14px rgba(15,124,58,.3);opacity:.5;cursor:not-allowed;">Jetzt registrieren <span class="arrow">→</span></span>
+          <span class="btn btn-outline" style="opacity:.5;cursor:not-allowed;">Mehr erfahren</span>
         </div>
-        <p style="margin-top:16px;font-size:13px;color:var(--c-text-muted);">Bereits registriert? <a href="https://winti-strings-logbuch-portal.vercel.app" target="_blank" rel="noopener" style="color:var(--c-primary);font-weight:600;">Hier einloggen →</a></p>
+        <div style="margin-top:16px;display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #c8e6c9;border-radius:var(--r-pill);padding:8px 16px;">
+          <span style="width:8px;height:8px;border-radius:50%;background:var(--c-accent);display:inline-block;animation:pulse 2s infinite;"></span>
+          <span style="font-size:13px;font-weight:600;color:var(--c-primary);">Bald verfügbar · Coming Soon</span>
+        </div>
+        <p style="margin-top:12px;font-size:13px;color:var(--c-text-muted);">Das Logbuch-Portal ist in Entwicklung – wir informieren dich sobald es bereit ist.</p>
       </div>
       <div class="logbuch-visual">
         <div class="logbuch-card">
