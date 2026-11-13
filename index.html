@@ -154,6 +154,9 @@ h1.hero-title .accent { font-style: italic; font-weight: 500; background: linear
 .hero-prices { display: flex; gap: 16px; flex-wrap: wrap; }
 .price-pill { background: var(--c-surface); border: 1px solid var(--c-border); border-radius: var(--r-lg); padding: 20px 24px; min-width: 180px; transition: transform .25s var(--ease-spring), border-color .25s, box-shadow .25s; }
 .price-pill:hover { transform: translateY(-4px) scale(1.02); border-color: var(--c-ink); box-shadow: var(--shadow-md); }
+.price-pill.accent { background: var(--c-accent); border-color: var(--c-accent-dark); }
+.price-pill.accent .label, .price-pill.accent .sub { color: #3a4a12; }
+.price-pill.accent .price { color: #0a0d0c; }
 .price-pill .label { font-size: 11px; color: var(--c-text-muted); text-transform: uppercase; letter-spacing: .1em; font-weight: 600; }
 .price-pill .price { font-family: var(--font-display); font-size: 36px; font-weight: 600; color: var(--c-ink); margin: 8px 0 4px; letter-spacing: -.02em; line-height: 1; }
 .price-pill .sub { font-size: 13px; color: var(--c-text-muted); }
@@ -503,6 +506,11 @@ footer.site-footer { background: var(--c-ink); color: rgba(255,255,255,.7); padd
             <div class="label">Mit Premium-Saiten</div>
             <div class="price">CHF 60</div>
             <div class="sub">Inkl. Beratung &amp; Saite</div>
+          </div>
+          <div class="price-pill accent">
+            <div class="label">Stammkunden</div>
+            <div class="price">10. gratis</div>
+            <div class="sub">Jede 10. Besaitung geschenkt</div>
           </div>
         </div>
       </div>
